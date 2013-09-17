@@ -1,0 +1,14 @@
+'pt-BR':
+  breadcrumbs:
+    'statuses':
+      index: 'Statuses'
+  general:
+    forms:
+      'status':
+
+  activerecord:
+    models:
+      'status': 'Statuses'
+    attributes:
+      'status':
+        'name': 'Name'

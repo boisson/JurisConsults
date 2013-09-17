@@ -1,0 +1,17 @@
+<table id="statuses_datatable" class="crud_datatable table table-condensed table-bordered table-striped table_vam" 
+  data-export-xlsx-url="<%= statuses_url(format: 'xlsx', q: params[:q]) %>" 
+  data-export-pdf-url="<%= statuses_url(format: 'pdf', q: params[:q]) %>" 
+  data-export-print-url="<%= statuses_url(format: 'print', q: params[:q]) %>" 
+  data-new-path="<%= new_status_path %>" 
+  data-source="<%= statuses_url(format: "json", q: params[:q]) %>">
+<thead>
+  <tr>
+  	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+  	<th width="70"><%= Status.human_attribute_name :id %></th>
+    <th><%= Status.human_attribute_name :name %></th>
+    <th width="226"></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
