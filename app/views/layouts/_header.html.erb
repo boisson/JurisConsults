@@ -20,6 +20,7 @@
             <ul class="dropdown-menu">
               <li><%=link_to t('general.actions.user_profile.my_profile'), '#', id: 'btn-my-profile' %></li>
               <li><%=link_to t('general.actions.user_profile.edit_password'), '#edit_password', data: {toggle: 'modal'} %></li>
+              <li><%=link_to t('general.terms.about'), '#about', data: {toggle: 'modal'} %></li>
               <li><%=link_to t('general.actions.logout'), proteste_auth_logout_path %></li>
             </ul>
           </li>
@@ -40,3 +41,4 @@
 
 <%= render partial: 'layouts/profile' %>
 <%= render partial: 'layouts/edit_password' %>
+<%= render partial: 'layouts/about' %>

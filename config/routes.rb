@@ -1,7 +1,9 @@
 JurisConsults::Application.routes.draw do
-	match 'statuses/batch_destroy', :via => :delete
-  resources :statuses
+	match 'advogados/batch_destroy', :via => :delete
+  resources :advogados
 
+
+  paf_scaffold :datatable, :versions, :import, :export
 
   match '/logout', :to => 'proteste/auth/user_sessions#destroy', as: :proteste_auth_logout
 
@@ -62,7 +64,7 @@ JurisConsults::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'advogados#index'
 
   # See how all your routes lay out with "rake routes"
 

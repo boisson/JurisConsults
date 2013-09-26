@@ -1,18 +1,10 @@
 window.crud_datatable = $('#<%=plural_table_name%>_datatable').dataTable
   fnDrawCallback: (oSettings) ->
-    $(".crud_datatable input:checkbox.hide").each ->
-      $(this).parent().dblclick ->
-        gebo_datatables.save_boolean_field($(this).find('input:checkbox'))
-    $(".crud_datatable input:text.hide").each ->
-      $(this).parent().dblclick ->
-        gebo_datatables.save_text_field($(this).find('input:text'))
-    $(".crud_datatable span.hide.content-for-datepicker").each ->
-      $(this).parent().dblclick ->
-        gebo_datatables.save_date_field($(this).find('input:hidden:first'))
+    gebo_datatables.draw_callback('#<%=plural_table_name%>_datatable')
   sPaginationType: "bootstrap"
   bProcessing: true
   bServerSide: true
-  aLengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "Todos"]]
+  aLengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, terms['all']]]
   aaSorting: [[1, "desc"]]
   sAjaxSource: $('#<%=plural_table_name%>_datatable').data('source')
   aoColumnDefs: [{ "bSortable": false, "aTargets": [ 0, <%= attributes.size + 2 %> ] }]
@@ -30,46 +22,10 @@ window.crud_datatable = $('#<%=plural_table_name%>_datatable').dataTable
 <% end -%>
     {sClass: "center"}
   ]
-  "sDom": 'T<"clear">lfrtip'
+  "sDom": "<'dt_export_actions'><'dt_other_actions'T><'clear'>lfrti<'dt_batch_destroy_action'>p"
   "oTableTools":
     "sSwfPath": "/lib/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
-    "aButtons": [
-      {
-        "fnClick": ( nButton, oConfig, oFlash ) ->
-          $('#modal-import').modal()
-        'sButtonText' : terms['import'],
-        "sExtends": "text"
-      },
-      {
-        "fnClick": ( nButton, oConfig, oFlash ) ->
-          gebo_datatables.export_print('#<%=plural_table_name%>_datatable')
-        'sButtonText' : terms['print'],
-        "sExtends": "text"
-      },
-      {
-        "sExtends": "copy",
-        'sButtonText' : terms['copy'],
-        "mColumns": <%= (1..attributes.size+1).to_a.inspect %>
-      },
-      {
-        "fnClick": ( nButton, oConfig, oFlash ) ->
-          gebo_datatables.export_xlsx('#<%=plural_table_name%>_datatable')
-        'sButtonText' : 'CSV',
-        "sExtends": "text"
-      },
-      {
-        "fnClick": ( nButton, oConfig, oFlash ) ->
-          gebo_datatables.export_xlsx('#<%=plural_table_name%>_datatable')
-        'sButtonText' : 'XLSX',
-        "sExtends": "text"
-      },
-      {
-        "fnClick": ( nButton, oConfig, oFlash ) ->
-          gebo_datatables.export_pdf('#<%=plural_table_name%>_datatable')
-        'sButtonText' : 'PDF',
-        "sExtends": "text"
-      }
-    ]
+    "aButtons": gebo_datatables.crud_buttons('#<%=plural_table_name%>_datatable',<%= (1..attributes.size+1).to_a.inspect %>)
   oLanguage:
     "sUrl": "/datatable/i18n"
 

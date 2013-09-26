@@ -227,9 +227,10 @@ gebo_datatables = {
   },
 
   hide_columns_binds: function(){
+    var oTable = $('.crud_datatable').dataTable();
     function fnShowHide( iCol ) {
       /* Get the DataTables object again - this is not a recreation, just a get of the object */
-      var oTable = $('.crud_datatable').dataTable();
+      oTable = $('.crud_datatable').dataTable();
        
       var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
       oTable.fnSetColumnVis( iCol, bVis ? false : true );
@@ -690,9 +691,9 @@ gebo_datatables = {
     })
 
     var export_actions = '<div class="row-fluid">'+
-        '<div class="span6" style="width:238px">'+terms['export']
+        '<div class="span6" style="width:200px">'+terms['export']
           +'<br />'+
-          '<select title="'+terms['export_tip']+'" id="slt-export" onchange="gebo_datatables.export(this,\''+datatable_id+'\')">'+
+          '<select style="width:95%" title="'+terms['export_tip']+'" id="slt-export" onchange="gebo_datatables.export(this,\''+datatable_id+'\')">'+
             '<option value="">CSV, XLSX, PDF</option>'+
             '<option value="xlsx">CSV</option>'+
             '<option value="xlsx">XLSX</option>'+

@@ -1,19 +1,8 @@
-<table id="<%= plural_table_name %>_datatable" class="crud_datatable table table-condensed table-bordered table-striped table_vam" 
-  data-export-xlsx-url="<%%= <%=plural_table_name%>_url(format: 'xlsx', q: params[:q]) %>" 
-  data-export-pdf-url="<%%= <%=plural_table_name%>_url(format: 'pdf', q: params[:q]) %>" 
-  data-export-print-url="<%%= <%=plural_table_name%>_url(format: 'print', q: params[:q]) %>" 
-  data-new-path="<%%= new_<%= singular_table_name %>_path %>" 
-  data-source="<%%= <%= plural_table_name %>_url(format: "json", q: params[:q]) %>">
-<thead>
-  <tr>
-  	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
-  	<th width="70"><%%= <%=class_name%>.human_attribute_name :id %></th>
+<%%= datatable_build_table('<%= plural_table_name %>_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%%= <%=class_name%>.human_attribute_name :id %></th>
 <% attributes.each do |attribute| -%>
-    <th><%%= <%=class_name%>.human_attribute_name :<%=attribute.name %> %></th>
+  <th><%%= <%=class_name%>.human_attribute_name :<%=attribute.name %> %></th>
 <% end -%>
-    <th width="226"></th>
-  </tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+  <th width="226"></th>
+<%% end -%>

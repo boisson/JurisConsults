@@ -1,16 +1,18 @@
 GIT
   remote: https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git
-  revision: 50b74c20a7dc772cffb0c0c812439353d2707f14
+  revision: 4f542bc49cdd16eeea992cfa4dccaf8da2b7c624
   specs:
     proteste_authorize (0.2.11)
+      ZenTest (= 4.8.3)
       actionpack
       nokogiri
 
 GIT
   remote: https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git
-  revision: 4a4f7998e758c083c0b70a7ddfd7242c1f0228b8
+  revision: c1944c081adb0b8538dfae1e96b4e523dc18d2e4
   specs:
-    proteste_scaffold (0.3.22)
+    proteste_scaffold (0.3.26)
+      ZenTest (= 4.8.3)
       acts_as_xlsx
       ckeditor
       jquery-rails (= 2.1.4)
@@ -33,9 +35,10 @@ GIT
 
 GIT
   remote: https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git
-  revision: 1dfbd19513935b60748207455a53301fbdae7558
+  revision: 8bfccdbcd99c8ad939a9a48275547137f59070da
   specs:
     proteste_auth (0.1.8)
+      ZenTest (= 4.8.3)
       actionpack
       activemodel
       omniauth
@@ -43,9 +46,10 @@ GIT
 
 GIT
   remote: https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git
-  revision: 6c894495bb4a36e70967be3d346e7ba3e8374820
+  revision: 55465b3e04eed404894f6e030a27034eceac8f18
   specs:
-    proteste_generate_application (0.1.30)
+    proteste_generate_application (0.1.41)
+      ZenTest (= 4.8.3)
       actionpack
       activemodel
       httparty
@@ -55,6 +59,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.0.2)
+    ZenTest (4.8.3)
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
       mail (~> 2.5.3)
@@ -173,6 +178,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pg (0.17.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -219,7 +225,7 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rspec-core (2.14.5)
-    rspec-expectations (2.14.2)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.3)
     rspec-rails (2.14.0)
@@ -250,7 +256,6 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.8)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -269,13 +274,14 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    will_paginate (3.0.4)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  pg
   proteste_auth!
   proteste_authorize!
   proteste_generate_application!
@@ -284,6 +290,5 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
-  sqlite3
   therubyracer
   uglifier (>= 1.0.3)
