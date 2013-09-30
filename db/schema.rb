@@ -45,27 +45,6 @@ ActiveRecord::Schema.define(:version => 20130929155819) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "advogados_advogado_id_versions", :force => true do |t|
-    t.string   "item_type",      :null => false
-    t.integer  "item_id",        :null => false
-    t.string   "event",          :null => false
-    t.string   "whodunnit"
-    t.text     "object"
-    t.text     "object_changes"
-    t.datetime "created_at"
-  end
-
-  add_index "advogados_advogado_id_versions", ["item_type", "item_id"], :name => "index_advogados_advogado_id_versions_on_item_type_and_item_id"
-
-  create_table "advogados_advogado_ids", :force => true do |t|
-    t.integer  "escritorio_id"
-    t.integer  "advogado_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "advogados_advogado_ids", ["advogado_id"], :name => "index_advogados_advogado_ids_on_advogado_id"
-  add_index "advogados_advogado_ids", ["escritorio_id"], :name => "index_advogados_advogado_ids_on_escritorio_id"
 
   create_table "advogados_escritorio_versions", :force => true do |t|
     t.string   "item_type",      :null => false
