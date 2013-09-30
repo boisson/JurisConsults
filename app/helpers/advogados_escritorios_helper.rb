@@ -1,0 +1,2 @@
+module AdvogadosEscritoriosHelper
+end
