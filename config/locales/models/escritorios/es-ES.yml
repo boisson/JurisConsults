@@ -1,0 +1,22 @@
+'es-ES':
+  breadcrumbs:
+    'escritorios':
+      index: 'Escritorios'
+  general:
+    forms:
+      'escritorio':
+
+  activerecord:
+    models:
+      'escritorio': 'Escritorios'
+    attributes:
+      'escritorio':
+        'name': 'Name'
+        'logradouro': 'Logradouro'
+        'numero': 'Numero'
+        'complemento': 'Complemento'
+        'bairro': 'Bairro'
+        'cep': 'Cep'
+        'cidade': 'Cidade'
+        'estado': 'Estado'
+        'advogados': 'Advogados'

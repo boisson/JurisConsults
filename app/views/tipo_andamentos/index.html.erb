@@ -1,0 +1,13 @@
+<h3 class="heading"><%= t('activerecord.models.tipo_andamento') %></h3>
+
+<div class="tabbable">
+	<%=render partial: 'shared/tabs_crud_header' %>
+	<%=render partial: 'shared/tabs_crud_body' %>
+</div>
+
+<%=render partial: 'import/modal_form', locals: {class_to_import: 'TipoAndamento'} %>
+
+
+<% content_for(:footer) do %>
+<%= javascript_include_tag 'tipo_andamentos', 'tipo_andamentos_datatable' %>
+<% end -%>

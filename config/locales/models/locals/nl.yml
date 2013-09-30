@@ -1,0 +1,14 @@
+'nl':
+  breadcrumbs:
+    'locals':
+      index: 'Locals'
+  general:
+    forms:
+      'local':
+
+  activerecord:
+    models:
+      'local': 'Locals'
+    attributes:
+      'local':
+        'name': 'Name'

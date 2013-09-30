@@ -1,0 +1,14 @@
+'pt-BR':
+  breadcrumbs:
+    'situacaos':
+      index: 'Situações'
+  general:
+    forms:
+      'situacao':
+
+  activerecord:
+    models:
+      'situacao': 'Situações'
+    attributes:
+      'situacao':
+        'name': 'Nome'

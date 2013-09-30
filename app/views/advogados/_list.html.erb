@@ -1,0 +1,12 @@
+<%= datatable_build_table('advogados_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%= Advogado.human_attribute_name :id %></th>
+  <th><%= Advogado.human_attribute_name :name %></th>
+  <th><%= Advogado.human_attribute_name :oab %></th>
+  <th><%= Advogado.human_attribute_name :cidade %></th>
+  <th><%= Advogado.human_attribute_name :estado %></th>
+  <th><%= Advogado.human_attribute_name :situacao %></th>
+  <th><%= Advogado.human_attribute_name :telefone %></th>
+  <th><%= Advogado.human_attribute_name :celular %></th>
+  <th width="226"></th>
+<% end -%>

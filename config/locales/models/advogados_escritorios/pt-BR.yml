@@ -1,0 +1,17 @@
+'pt-BR':
+  breadcrumbs:
+    'advogados_escritorios':
+      index: 'Advogados x Escritórios'
+  general:
+    forms:
+      'advogados_escritorio':
+        'choose_escritorio': 'Escolher Escritório'
+        'choose_advogado': 'Escolher Advogado'
+
+  activerecord:
+    models:
+      'advogados_escritorio': 'Advogados x escritórios'
+    attributes:
+      'advogados_escritorio':
+        'escritorio': 'Escritório'
+        'advogado': 'Advogado'

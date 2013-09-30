@@ -1,0 +1,29 @@
+'pt-BR':
+  breadcrumbs:
+    'processos':
+      index: 'Processos'
+  general:
+    forms:
+      'processo':
+        'choose_cliente': 'Escolher Cliente'
+        'choose_reu': 'Escolher Parte Contrária'
+        'choose_advogado': 'Escolher Advogado'
+        'choose_local': 'Escolher Local'
+        'choose_tipo_processo': 'Escolher Tipo de processo'
+
+  activerecord:
+    models:
+      'processo': 'Processos'
+    attributes:
+      'processo':
+        'numero': 'Número'
+        'ano': 'Ano'
+        'data_inicio': 'Data início'
+        'data_fim': 'Data fim'
+        'cliente': 'Cliente'
+        'reu': 'Parte contrária'
+        'advogado': 'Advogado'
+        'local': 'Local'
+        'tipo_processo': 'Tipo de processo'
+        'custas': 'Custas'
+        'honorarios': 'Honorários'

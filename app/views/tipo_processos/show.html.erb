@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tipo_processo.name %>
+</p>
+
+<p>
+  <b>Formato:</b>
+  <%= @tipo_processo.formato %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_processo_path(@tipo_processo) %> |
+<%= link_to 'Back', tipo_processos_path %>

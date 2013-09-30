@@ -1,0 +1,17 @@
+<%= simple_form_for(@tipo_andamento, html: {class: 'form-horizontal'}, remote: true) do |f| %>
+  
+  <%= f.input :name, as: :string, input_html: {class: 'span5'} %>
+  
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <%= f.button :submit, value: t('general.actions.save_and_go_to_new'), name: :submit_and_go_to_new, class: 'btn' %>
+    <%= link_to(t('general.actions.cancel'), 'javascript:gebo_datatables.go_to_list()', class: 'btn') %>
+  </div>
+<% end %>
+
+
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    p_scaffold_form.init_all();
+  })
+</script>

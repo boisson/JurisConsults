@@ -1,0 +1,14 @@
+'pt-BR':
+  breadcrumbs:
+    'locals':
+      index: 'Locais'
+  general:
+    forms:
+      'local':
+
+  activerecord:
+    models:
+      'local': 'Locais'
+    attributes:
+      'local':
+        'name': 'Nome'

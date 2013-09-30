@@ -1,0 +1,29 @@
+'pt':
+  breadcrumbs:
+    'processos':
+      index: 'Processos'
+  general:
+    forms:
+      'processo':
+        'choose_cliente': 'Choose Cliente'
+        'choose_reu': 'Choose Reu'
+        'choose_advogado': 'Choose Advogado'
+        'choose_local': 'Choose Local'
+        'choose_tipo_processo': 'Choose Tipo processo'
+
+  activerecord:
+    models:
+      'processo': 'Processos'
+    attributes:
+      'processo':
+        'numero': 'Numero'
+        'ano': 'Ano'
+        'data_inicio': 'Data inicio'
+        'data_fim': 'Data fim'
+        'cliente': 'Cliente'
+        'reu': 'Reu'
+        'advogado': 'Advogado'
+        'local': 'Local'
+        'tipo_processo': 'Tipo processo'
+        'custas': 'Custas'
+        'honorarios': 'Honorarios'

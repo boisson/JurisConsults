@@ -1,0 +1,17 @@
+'pt':
+  breadcrumbs:
+    'advogados_escritorios':
+      index: 'Advogados escritorios'
+  general:
+    forms:
+      'advogados_escritorio':
+        'choose_escritorio': 'Choose Escritorio'
+        'choose_advogado': 'Choose Advogado'
+
+  activerecord:
+    models:
+      'advogados_escritorio': 'Advogados escritorios'
+    attributes:
+      'advogados_escritorio':
+        'escritorio': 'Escritorio'
+        'advogado': 'Advogado'

@@ -1,0 +1,14 @@
+'pt-BR':
+  breadcrumbs:
+    'assunto_processuals':
+      index: 'Assuntos processuais'
+  general:
+    forms:
+      'assunto_processual':
+
+  activerecord:
+    models:
+      'assunto_processual': 'Assuntos processuais'
+    attributes:
+      'assunto_processual':
+        'name': 'Nome'

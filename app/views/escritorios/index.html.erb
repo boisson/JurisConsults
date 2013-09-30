@@ -1,0 +1,13 @@
+<h3 class="heading"><%= t('activerecord.models.escritorio') %></h3>
+
+<div class="tabbable">
+	<%=render partial: 'shared/tabs_crud_header' %>
+	<%=render partial: 'shared/tabs_crud_body' %>
+</div>
+
+<%=render partial: 'import/modal_form', locals: {class_to_import: 'Escritorio'} %>
+
+
+<% content_for(:footer) do %>
+<%= javascript_include_tag 'escritorios', 'escritorios_datatable' %>
+<% end -%>

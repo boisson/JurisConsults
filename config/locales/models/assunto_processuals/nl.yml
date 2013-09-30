@@ -1,0 +1,14 @@
+'nl':
+  breadcrumbs:
+    'assunto_processuals':
+      index: 'Assunto processuals'
+  general:
+    forms:
+      'assunto_processual':
+
+  activerecord:
+    models:
+      'assunto_processual': 'Assunto processuals'
+    attributes:
+      'assunto_processual':
+        'name': 'Name'

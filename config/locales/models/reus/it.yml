@@ -1,0 +1,28 @@
+'it':
+  breadcrumbs:
+    'reus':
+      index: 'Reus'
+  general:
+    forms:
+      'reu':
+
+  activerecord:
+    models:
+      'reu': 'Reus'
+    attributes:
+      'reu':
+        'name': 'Name'
+        'cpf': 'Cpf'
+        'cnpj': 'Cnpj'
+        'contato': 'Contato'
+        'logradouro': 'Logradouro'
+        'numero': 'Numero'
+        'complemento': 'Complemento'
+        'bairro': 'Bairro'
+        'cidade': 'Cidade'
+        'estado': 'Estado'
+        'cep': 'Cep'
+        'comentario': 'Comentario'
+        'telefone': 'Telefone'
+        'celular': 'Celular'
+        'fax': 'Fax'

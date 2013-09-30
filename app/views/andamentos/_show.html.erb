@@ -1,0 +1,27 @@
+<p>
+  <strong><%= Andamento.human_attribute_name :processo %>:</strong>
+  <%= @andamento.processo %>
+</p>
+
+<p>
+  <strong><%= Andamento.human_attribute_name :data %>:</strong>
+  <%= @andamento.data %>
+</p>
+
+<p>
+  <strong><%= Andamento.human_attribute_name :tipo_andamento %>:</strong>
+  <%= @andamento.tipo_andamento %>
+</p>
+
+<p>
+  <strong><%= Andamento.human_attribute_name :situacao %>:</strong>
+  <%= @andamento.situacao %>
+</p>
+
+<p>
+  <strong><%= Andamento.human_attribute_name :comentario %>:</strong>
+  <%= @andamento.comentario %>
+</p>
+
+
+<%= go_back_to_list %>

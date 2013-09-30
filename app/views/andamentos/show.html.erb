@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Processo:</b>
+  <%= @andamento.processo %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @andamento.data %>
+</p>
+
+<p>
+  <b>Tipo andamento:</b>
+  <%= @andamento.tipo_andamento %>
+</p>
+
+<p>
+  <b>Situacao:</b>
+  <%= @andamento.situacao %>
+</p>
+
+<p>
+  <b>Comentario:</b>
+  <%= @andamento.comentario %>
+</p>
+
+
+<%= link_to 'Edit', edit_andamento_path(@andamento) %> |
+<%= link_to 'Back', andamentos_path %>

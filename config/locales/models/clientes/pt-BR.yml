@@ -1,0 +1,29 @@
+'pt-BR':
+  breadcrumbs:
+    'clientes':
+      index: 'Clientes'
+  general:
+    forms:
+      'cliente':
+        'choose_situacao': 'Escolher Situacao'
+
+  activerecord:
+    models:
+      'cliente': 'Clientes'
+    attributes:
+      'cliente':
+        'name': 'Nome'
+        'cpf': 'Cpf'
+        'cnpj': 'Cnpj'
+        'situacao': 'Situação'
+        'logradouro': 'Logradouro'
+        'numero': 'Número'
+        'complemento': 'Complemento'
+        'bairro': 'Bairro'
+        'cidade': 'Cidade'
+        'estado': 'Estado'
+        'cep': 'Cep'
+        'comentario': 'Comentário'
+        'telefone': 'Telefone'
+        'celular': 'Celular'
+        'fax': 'Fax'

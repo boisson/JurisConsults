@@ -1,0 +1,28 @@
+'en':
+  breadcrumbs:
+    'advogados':
+      index: 'Advogados'
+  general:
+    forms:
+      'advogado':
+
+  activerecord:
+    models:
+      'advogado': 'Advogados'
+    attributes:
+      'advogado':
+        'name': 'Name'
+        'cpf': 'Cpf'
+        'oab': 'Oab'
+        'logradouro': 'Street'
+        'numero': 'Number'
+        'complemento': 'Complement'
+        'bairro': 'Neiborhood'
+        'cidade': 'City'
+        'estado': 'State'
+        'cep': 'Zip Code'
+        'curriculo': 'Curriculum'
+        'comentario': 'Comment'
+        'situacao': 'Status'
+        'telefone': 'Phone'
+        'celular': 'Mobile Phone'

@@ -1,0 +1,21 @@
+'nl':
+  breadcrumbs:
+    'andamentos':
+      index: 'Andamentos'
+  general:
+    forms:
+      'andamento':
+        'choose_processo': 'Choose Processo'
+        'choose_tipo_andamento': 'Choose Tipo andamento'
+        'choose_situacao': 'Choose Situacao'
+
+  activerecord:
+    models:
+      'andamento': 'Andamentos'
+    attributes:
+      'andamento':
+        'processo': 'Processo'
+        'data': 'Data'
+        'tipo_andamento': 'Tipo andamento'
+        'situacao': 'Situacao'
+        'comentario': 'Comentario'

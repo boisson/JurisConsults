@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numero:</b>
+  <%= @processo.numero %>
+</p>
+
+<p>
+  <b>Ano:</b>
+  <%= @processo.ano %>
+</p>
+
+<p>
+  <b>Data inicio:</b>
+  <%= @processo.data_inicio %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%= @processo.data_fim %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @processo.cliente %>
+</p>
+
+<p>
+  <b>Reu:</b>
+  <%= @processo.reu %>
+</p>
+
+<p>
+  <b>Advogado:</b>
+  <%= @processo.advogado %>
+</p>
+
+<p>
+  <b>Local:</b>
+  <%= @processo.local %>
+</p>
+
+<p>
+  <b>Tipo processo:</b>
+  <%= @processo.tipo_processo %>
+</p>
+
+<p>
+  <b>Custas:</b>
+  <%= @processo.custas %>
+</p>
+
+<p>
+  <b>Honorarios:</b>
+  <%= @processo.honorarios %>
+</p>
+
+
+<%= link_to 'Edit', edit_processo_path(@processo) %> |
+<%= link_to 'Back', processos_path %>

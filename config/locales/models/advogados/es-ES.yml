@@ -1,0 +1,28 @@
+'es-ES':
+  breadcrumbs:
+    'advogados':
+      index: 'Advogados'
+  general:
+    forms:
+      'advogado':
+
+  activerecord:
+    models:
+      'advogado': 'Advogados'
+    attributes:
+      'advogado':
+        'name': 'Name'
+        'cpf': 'Cpf'
+        'oab': 'Oab'
+        'logradouro': 'Logradouro'
+        'numero': 'Numero'
+        'complemento': 'Complemento'
+        'bairro': 'Bairro'
+        'cidade': 'Cidade'
+        'estado': 'Estado'
+        'cep': 'Cep'
+        'curriculo': 'Curriculo'
+        'comentario': 'Comentario'
+        'situacao': 'Situacao'
+        'telefone': 'Telefone'
+        'celular': 'Celular'

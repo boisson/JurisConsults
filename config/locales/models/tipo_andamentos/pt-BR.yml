@@ -1,0 +1,14 @@
+'pt-BR':
+  breadcrumbs:
+    'tipo_andamentos':
+      index: 'Tipo de andamentos'
+  general:
+    forms:
+      'tipo_andamento':
+
+  activerecord:
+    models:
+      'tipo_andamento': 'Tipo de andamentos'
+    attributes:
+      'tipo_andamento':
+        'name': 'Nome'

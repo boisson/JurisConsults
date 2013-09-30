@@ -1,0 +1,14 @@
+<%= datatable_build_table('processos_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%= Processo.human_attribute_name :id %></th>
+  <th><%= Processo.human_attribute_name :numero %></th>
+  <th><%= Processo.human_attribute_name :ano %></th>
+  <th><%= Processo.human_attribute_name :data_inicio %></th>
+  <th><%= Processo.human_attribute_name :data_fim %></th>
+  <th><%= Processo.human_attribute_name :cliente %></th>
+  <th><%= Processo.human_attribute_name :reu %></th>
+  <th><%= Processo.human_attribute_name :advogado %></th>
+  <th><%= Processo.human_attribute_name :local %></th>
+  <th><%= Processo.human_attribute_name :tipo_processo %></th>
+  <th width="226"></th>
+<% end -%>

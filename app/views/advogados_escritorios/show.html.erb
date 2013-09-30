@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Escritorio:</b>
+  <%= @advogados_escritorio.escritorio %>
+</p>
+
+<p>
+  <b>Advogado:</b>
+  <%= @advogados_escritorio.advogado %>
+</p>
+
+
+<%= link_to 'Edit', edit_advogados_escritorio_path(@advogados_escritorio) %> |
+<%= link_to 'Back', advogados_escritorios_path %>
