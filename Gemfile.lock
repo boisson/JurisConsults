@@ -1,17 +1,17 @@
 GIT
   remote: https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git
-  revision: 4f542bc49cdd16eeea992cfa4dccaf8da2b7c624
+  revision: ca2e07872300a786407b8052afc3f9684c545e1d
   specs:
-    proteste_authorize (0.2.11)
+    proteste_authorize (0.2.13)
       ZenTest (= 4.8.3)
       actionpack
       nokogiri
 
 GIT
   remote: https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git
-  revision: c1944c081adb0b8538dfae1e96b4e523dc18d2e4
+  revision: 2bdf2e3f606242a23775bcac5b0a4cc6b0289a3e
   specs:
-    proteste_scaffold (0.3.26)
+    proteste_scaffold (0.3.27)
       ZenTest (= 4.8.3)
       acts_as_xlsx
       ckeditor
@@ -46,9 +46,9 @@ GIT
 
 GIT
   remote: https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git
-  revision: 55465b3e04eed404894f6e030a27034eceac8f18
+  revision: 1bb66d54c84f98b670e299635d8ecb5988d9e388
   specs:
-    proteste_generate_application (0.1.41)
+    proteste_generate_application (0.1.42)
       ZenTest (= 4.8.3)
       actionpack
       activemodel
@@ -103,7 +103,7 @@ GEM
       orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.1)
+    cocaine (0.5.2)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)

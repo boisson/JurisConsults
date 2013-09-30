@@ -1,7 +1,50 @@
 JurisConsults::Application.routes.draw do
+	match 'advogados_escritorios/batch_destroy', :via => :delete
+  resources :advogados_escritorios
+
+
+	match 'escritorios/batch_destroy', :via => :delete
+  resources :escritorios
+
+
+	match 'assunto_processuals/batch_destroy', :via => :delete
+  resources :assunto_processuals
+
+
+	match 'andamentos/batch_destroy', :via => :delete
+  resources :andamentos
+
+
+	match 'processos/batch_destroy', :via => :delete
+  resources :processos
+
+
+	match 'tipo_andamentos/batch_destroy', :via => :delete
+  resources :tipo_andamentos
+
+
+	match 'tipo_processos/batch_destroy', :via => :delete
+  resources :tipo_processos
+
+
+	match 'locals/batch_destroy', :via => :delete
+  resources :locals
+
+
+	match 'clientes/batch_destroy', :via => :delete
+  resources :clientes
+
+
+	match 'situacaos/batch_destroy', :via => :delete
+  resources :situacaos
+
+
+	match 'reus/batch_destroy', :via => :delete
+  resources :reus
+
+
 	match 'advogados/batch_destroy', :via => :delete
   resources :advogados
-
 
   paf_scaffold :datatable, :versions, :import, :export
 
