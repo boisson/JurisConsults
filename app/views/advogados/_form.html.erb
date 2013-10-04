@@ -2,7 +2,7 @@
   
   <%= f.input :name, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :cpf, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :cpf, as: :string, input_html: {class: 'span5'}, :placeholder => "apenas os números" %>
     
   <%= f.input :oab, as: :string, input_html: {class: 'span5'} %>
     
@@ -16,9 +16,9 @@
     
   <%= f.input :cidade, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :estado, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :estado, as: :string, input_html: {class: 'span5'} , :placeholder => "RJ" %>
     
-  <%= f.input :cep, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :cep, as: :string, input_html: {class: 'span5'} , :placeholder => "99.999-999"%>
     
   <%= f.input :curriculo, as: :ckeditor %>
     
@@ -26,9 +26,9 @@
     
   <%= f.input :situacao, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :telefone, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :telefone, as: :string, input_html: {class: 'span5'}, :placeholder => "(99) 9999-9999" %>
     
-  <%= f.input :celular, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :celular, as: :string, input_html: {class: 'span5'}, :placeholder => "(99) 9999-9999" %>
   
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-primary' %>

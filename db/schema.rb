@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130929155819) do
+ActiveRecord::Schema.define(:version => 20131004175613) do
 
   create_table "advogado_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20130929155819) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
 
   create_table "advogados_escritorio_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -162,6 +161,53 @@ ActiveRecord::Schema.define(:version => 20130929155819) do
 
   add_index "clientes", ["situacao_id"], :name => "index_clientes_on_situacao_id"
 
+  create_table "conta_corrente_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "conta_corrente_versions", ["item_type", "item_id"], :name => "index_conta_corrente_versions_on_item_type_and_item_id"
+
+  create_table "conta_correntes", :force => true do |t|
+    t.datetime "date"
+    t.integer  "contrato_id"
+    t.float    "valor"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "conta_correntes", ["contrato_id"], :name => "index_conta_correntes_on_contrato_id"
+
+  create_table "contrato_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "contrato_versions", ["item_type", "item_id"], :name => "index_contrato_versions_on_item_type_and_item_id"
+
+  create_table "contratos", :force => true do |t|
+    t.string   "name"
+    t.integer  "processo_id"
+    t.float    "valor"
+    t.integer  "forma_pagamento_id"
+    t.float    "saldo"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "contratos", ["forma_pagamento_id"], :name => "index_contratos_on_forma_pagamento_id"
+  add_index "contratos", ["processo_id"], :name => "index_contratos_on_processo_id"
+
   create_table "escritorio_versions", :force => true do |t|
     t.string   "item_type",      :null => false
     t.integer  "item_id",        :null => false
@@ -186,6 +232,27 @@ ActiveRecord::Schema.define(:version => 20130929155819) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "forma_pagamento_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "forma_pagamento_versions", ["item_type", "item_id"], :name => "index_forma_pagamento_versions_on_item_type_and_item_id"
+
+  create_table "forma_pagamentos", :force => true do |t|
+    t.string   "name"
+    t.integer  "tipo_pagamento_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "forma_pagamentos", ["tipo_pagamento_id"], :name => "index_forma_pagamentos_on_tipo_pagamento_id"
 
   create_table "local_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -341,6 +408,25 @@ ActiveRecord::Schema.define(:version => 20130929155819) do
     t.string   "tipo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_pagamento_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "tipo_pagamento_versions", ["item_type", "item_id"], :name => "index_tipo_pagamento_versions_on_item_type_and_item_id"
+
+  create_table "tipo_pagamentos", :force => true do |t|
+    t.string   "name"
+    t.integer  "periodicidade"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "tipo_processo_versions", :force => true do |t|

@@ -1,4 +1,20 @@
 JurisConsults::Application.routes.draw do
+	match 'conta_correntes/batch_destroy', :via => :delete
+  resources :conta_correntes
+
+
+	match 'contratos/batch_destroy', :via => :delete
+  resources :contratos
+
+
+	match 'forma_pagamentos/batch_destroy', :via => :delete
+  resources :forma_pagamentos
+
+
+	match 'tipo_pagamentos/batch_destroy', :via => :delete
+  resources :tipo_pagamentos
+
+
 	match 'advogados_escritorios/batch_destroy', :via => :delete
   resources :advogados_escritorios
 
