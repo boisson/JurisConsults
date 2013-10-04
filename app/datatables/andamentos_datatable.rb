@@ -14,6 +14,7 @@ protected
         link_to(andamento.id,andamento_path(andamento), remote: true),
         ((andamento.processo.name rescue andamento.processo.id) if andamento.processo),
         input_date(andamento,(l(andamento.data) rescue nil), :data),
+        input_text(andamento,andamento.prazo, :prazo),
         ((andamento.tipo_andamento.name rescue andamento.tipo_andamento.id) if andamento.tipo_andamento),
         ((andamento.situacao.name rescue andamento.situacao.id) if andamento.situacao),
         strip_tags(andamento.comentario),
