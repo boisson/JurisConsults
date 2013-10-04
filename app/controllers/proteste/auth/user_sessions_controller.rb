@@ -36,6 +36,7 @@ class Proteste::Auth::UserSessionsController < ApplicationController
   # logout - Clear our rack session BUT essentially redirect to the provider
   # to clean up the Devise session from there too !
   def destroy
+    Rails.cache.delete("proteste_permissions_#{current_user.id}")
     reset_session
 
     flash[:notice] = I18n.t('devise.sessions.signed_out')

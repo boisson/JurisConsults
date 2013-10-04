@@ -1,17 +1,17 @@
 GIT
   remote: https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git
-  revision: ca2e07872300a786407b8052afc3f9684c545e1d
+  revision: 7ad5fbb90124918c21a9d36e9aa5063c900f5d22
   specs:
-    proteste_authorize (0.2.13)
+    proteste_authorize (0.2.17)
       ZenTest (= 4.8.3)
       actionpack
       nokogiri
 
 GIT
   remote: https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git
-  revision: 2bdf2e3f606242a23775bcac5b0a4cc6b0289a3e
+  revision: d92352edd0f0a414950de9d1a8ccc1b49f0dac45
   specs:
-    proteste_scaffold (0.3.27)
+    proteste_scaffold (0.3.31)
       ZenTest (= 4.8.3)
       acts_as_xlsx
       ckeditor
@@ -35,9 +35,9 @@ GIT
 
 GIT
   remote: https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git
-  revision: 8bfccdbcd99c8ad939a9a48275547137f59070da
+  revision: a428c07db13ffae09fc1d0fdbad63975ea2549e9
   specs:
-    proteste_auth (0.1.8)
+    proteste_auth (0.1.9)
       ZenTest (= 4.8.3)
       actionpack
       activemodel
@@ -46,9 +46,9 @@ GIT
 
 GIT
   remote: https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git
-  revision: 1bb66d54c84f98b670e299635d8ecb5988d9e388
+  revision: 1cf15407adfd6b3e1542a1748d0383caed28914f
   specs:
-    proteste_generate_application (0.1.42)
+    proteste_generate_application (0.1.47)
       ZenTest (= 4.8.3)
       actionpack
       activemodel
@@ -115,7 +115,7 @@ GEM
     commonjs (0.2.7)
     diff-lcs (1.2.4)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     fast_xs (0.8.0)
@@ -146,7 +146,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     mini_portile (0.5.1)
-    multi_json (1.8.0)
+    multi_json (1.8.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
     nokogiri (1.6.0)
@@ -238,7 +238,7 @@ GEM
     ruby-ole (1.2.11.7)
     ruby-rc4 (0.1.5)
     rubyzip (0.9.9)
-    sass (3.2.10)
+    sass (3.2.11)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)

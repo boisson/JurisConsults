@@ -2,8 +2,8 @@
 # Since this is a registered application, add the app id and secret here
 require 'proteste_auth_id'
 
-APP_ID      = '6e6469e1d695388292c836162be9ef264081ed0683a47b'
-APP_SECRET  = '45e1bd946aa5ec60b5ede929b4b003f8110de75bf1f67985cfaaea6773414bf15a7644d874bbc3b8af837d'
+APP_ID      = '69248873499326507a51282d58b4a93c6e0a9825ac7c1d'
+APP_SECRET  = '2e8c4b7d0eefc9366959dcae3b88f9bac24547aacdbdd330f173a4b1912004d1b1a9fce42c767e9c7debac'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :proteste_auth_id, APP_ID, APP_SECRET

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131004175613) do
+ActiveRecord::Schema.define(:version => 20131004232222) do
 
   create_table "advogado_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20131004175613) do
     t.text     "comentario"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "prazo"
   end
 
   add_index "andamentos", ["processo_id"], :name => "index_andamentos_on_processo_id"

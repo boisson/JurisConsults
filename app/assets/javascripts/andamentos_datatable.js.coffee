@@ -16,7 +16,7 @@ window.crud_datatable = $('#andamentos_datatable').dataTable
  
     {sName: "andamentos.data"},
 
-    {sName: ändamentos.prazo},
+    {sName: "andamentos.prazo"},
  
     {sName: "tipo_andamentos.name"},
  
