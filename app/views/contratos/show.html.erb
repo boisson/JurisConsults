@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @contrato.name %>
+</p>
+
+<p>
+  <b>Processo:</b>
+  <%= @contrato.processo %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @contrato.valor %>
+</p>
+
+<p>
+  <b>Forma pagamento:</b>
+  <%= @contrato.forma_pagamento %>
+</p>
+
+<p>
+  <b>Saldo:</b>
+  <%= @contrato.saldo %>
+</p>
+
+
+<%= link_to 'Edit', edit_contrato_path(@contrato) %> |
+<%= link_to 'Back', contratos_path %>

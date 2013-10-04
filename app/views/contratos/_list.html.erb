@@ -1,0 +1,10 @@
+<%= datatable_build_table('contratos_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%= Contrato.human_attribute_name :id %></th>
+  <th><%= Contrato.human_attribute_name :name %></th>
+  <th><%= Contrato.human_attribute_name :processo %></th>
+  <th><%= Contrato.human_attribute_name :valor %></th>
+  <th><%= Contrato.human_attribute_name :forma_pagamento %></th>
+  <th><%= Contrato.human_attribute_name :saldo %></th>
+  <th width="226"></th>
+<% end -%>

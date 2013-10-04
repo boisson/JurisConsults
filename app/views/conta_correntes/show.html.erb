@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @conta_corrente.date %>
+</p>
+
+<p>
+  <b>Contrato:</b>
+  <%= @conta_corrente.contrato %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @conta_corrente.valor %>
+</p>
+
+
+<%= link_to 'Edit', edit_conta_corrente_path(@conta_corrente) %> |
+<%= link_to 'Back', conta_correntes_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tipo_pagamento.name %>
+</p>
+
+<p>
+  <b>Periodicidade:</b>
+  <%= @tipo_pagamento.periodicidade %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_pagamento_path(@tipo_pagamento) %> |
+<%= link_to 'Back', tipo_pagamentos_path %>
