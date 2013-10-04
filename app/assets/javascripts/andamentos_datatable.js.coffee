@@ -7,7 +7,7 @@ window.crud_datatable = $('#andamentos_datatable').dataTable
   aLengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, terms['all']]]
   aaSorting: [[1, "desc"]]
   sAjaxSource: $('#andamentos_datatable').data('source')
-  aoColumnDefs: [{ "bSortable": false, "aTargets": [ 0, 7 ] }]
+  aoColumnDefs: [{ "bSortable": false, "aTargets": [ 0, 8 ] }]
   aoColumns: [
     {sClass: "center"},
     {sClass: "center", sName: "andamentos.id"},
@@ -15,6 +15,8 @@ window.crud_datatable = $('#andamentos_datatable').dataTable
     {sName: "processos.name"},
  
     {sName: "andamentos.data"},
+
+    {sName: ändamentos.prazo},
  
     {sName: "tipo_andamentos.name"},
  
@@ -26,7 +28,7 @@ window.crud_datatable = $('#andamentos_datatable').dataTable
   "sDom": "<'dt_export_actions'><'dt_other_actions'T><'clear'>lfrti<'dt_batch_destroy_action'>p"
   "oTableTools":
     "sSwfPath": "/lib/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
-    "aButtons": gebo_datatables.crud_buttons('#andamentos_datatable',[1, 2, 3, 4, 5, 6])
+    "aButtons": gebo_datatables.crud_buttons('#andamentos_datatable',[1, 2, 3, 4, 5, 6, 7])
   oLanguage:
     "sUrl": "/datatable/i18n"
 
@@ -36,6 +38,8 @@ window.advanced_search_columns =
   processo: 'references'
  
   data: 'date'
+
+  prazo: 'integer'
  
   tipo_andamento: 'references'
  

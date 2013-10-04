@@ -3,6 +3,8 @@
   <%= f.association :processo, input_html: {class: 'span5 chosen-options'} %>
     
   <%= f.input :data, as: :datepicker %>
+
+  <%= f.input :prazo, input_html: {class: 'spinner'} %>
     
   <%= f.association :tipo_andamento, input_html: {class: 'span5 chosen-options'} %>
     
