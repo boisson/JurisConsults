@@ -1,0 +1,15 @@
+'pt':
+  breadcrumbs:
+    'tipo_pagamentos':
+      index: 'Tipo pagamentos'
+  general:
+    forms:
+      'tipo_pagamento':
+
+  activerecord:
+    models:
+      'tipo_pagamento': 'Tipo pagamentos'
+    attributes:
+      'tipo_pagamento':
+        'name': 'Name'
+        'periodicidade': 'Periodicidade'

@@ -1,0 +1,16 @@
+'pt-BR':
+  breadcrumbs:
+    'forma_pagamentos':
+      index: 'Forma pagamentos'
+  general:
+    forms:
+      'forma_pagamento':
+        'choose_tipo_pagamento': 'Choose Tipo pagamento'
+
+  activerecord:
+    models:
+      'forma_pagamento': 'Forma pagamentos'
+    attributes:
+      'forma_pagamento':
+        'name': 'Name'
+        'tipo_pagamento': 'Tipo pagamento'

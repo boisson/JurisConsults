@@ -1,0 +1,20 @@
+'pt':
+  breadcrumbs:
+    'contratos':
+      index: 'Contratos'
+  general:
+    forms:
+      'contrato':
+        'choose_processo': 'Choose Processo'
+        'choose_forma_pagamento': 'Choose Forma pagamento'
+
+  activerecord:
+    models:
+      'contrato': 'Contratos'
+    attributes:
+      'contrato':
+        'name': 'Name'
+        'processo': 'Processo'
+        'valor': 'Valor'
+        'forma_pagamento': 'Forma pagamento'
+        'saldo': 'Saldo'

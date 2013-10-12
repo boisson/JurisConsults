@@ -1,0 +1,14 @@
+'nl':
+  breadcrumbs:
+    'fases':
+      index: 'Fases'
+  general:
+    forms:
+      'fase':
+
+  activerecord:
+    models:
+      'fase': 'Fases'
+    attributes:
+      'fase':
+        'name': 'Name'

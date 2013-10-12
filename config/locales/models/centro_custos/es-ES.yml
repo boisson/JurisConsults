@@ -1,0 +1,14 @@
+'es-ES':
+  breadcrumbs:
+    'centro_custos':
+      index: 'Centro custos'
+  general:
+    forms:
+      'centro_custo':
+
+  activerecord:
+    models:
+      'centro_custo': 'Centro custos'
+    attributes:
+      'centro_custo':
+        'name': 'Name'

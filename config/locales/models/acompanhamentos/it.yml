@@ -1,0 +1,18 @@
+'it':
+  breadcrumbs:
+    'acompanhamentos':
+      index: 'Acompanhamentos'
+  general:
+    forms:
+      'acompanhamento':
+        'choose_contratos': 'Choose Contratos'
+
+  activerecord:
+    models:
+      'acompanhamento': 'Acompanhamentos'
+    attributes:
+      'acompanhamento':
+        'contratos': 'Contratos'
+        'data': 'Data'
+        'hora': 'Hora'
+        'name': 'Name'

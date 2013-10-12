@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contratos:</b>
+  <%= @acompanhamento.contratos %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @acompanhamento.data %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @acompanhamento.hora %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @acompanhamento.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_acompanhamento_path(@acompanhamento) %> |
+<%= link_to 'Back', acompanhamentos_path %>

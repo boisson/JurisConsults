@@ -1,0 +1,14 @@
+'pt':
+  breadcrumbs:
+    'riscos':
+      index: 'Riscos'
+  general:
+    forms:
+      'risco':
+
+  activerecord:
+    models:
+      'risco': 'Riscos'
+    attributes:
+      'risco':
+        'name': 'Name'

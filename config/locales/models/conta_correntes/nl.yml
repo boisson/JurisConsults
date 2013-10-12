@@ -1,0 +1,17 @@
+'nl':
+  breadcrumbs:
+    'conta_correntes':
+      index: 'Conta correntes'
+  general:
+    forms:
+      'conta_corrente':
+        'choose_contrato': 'Choose Contrato'
+
+  activerecord:
+    models:
+      'conta_corrente': 'Conta correntes'
+    attributes:
+      'conta_corrente':
+        'date': 'Date'
+        'contrato': 'Contrato'
+        'valor': 'Valor'
