@@ -9,4 +9,8 @@ class Cliente < ActiveRecord::Base
             :presence => true
   belongs_to :situacao
   attr_accessible :bairro, :celular, :cep, :cidade, :cnpj, :comentario, :complemento, :cpf, :estado, :fax, :logradouro, :name, :numero, :telefone
+
+  validates :name,
+            :presence => true,
+            :uniqueness => true
 end

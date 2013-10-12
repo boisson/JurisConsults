@@ -1,14 +1,14 @@
 'pt-BR':
   breadcrumbs:
     'tipo_processos':
-      index: 'Tipo de processos'
+      index: 'Processuais'
   general:
     forms:
       'tipo_processo':
 
   activerecord:
     models:
-      'tipo_processo': 'Tipo de processos'
+      'tipo_processo': 'Processuais'
     attributes:
       'tipo_processo':
         'name': 'Nome'

@@ -1,9 +1,17 @@
 <%= simple_form_for(@contrato, html: {class: 'form-horizontal'}, remote: true) do |f| %>
   
   <%= f.input :name, as: :string, input_html: {class: 'span5'} %>
+
+  <%= f.input :dt_inicio, as: :datepicker %>
+
+  <%= f.input :dt_assinatura, as: :datepicker %>
+
+  <%= f.input :dt_fim, as: :datepicker %>
     
   <%= f.association :processo, input_html: {class: 'span5 chosen-options'} %>
-    
+
+  <%= f.association :tipo_processo, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.input :valor, :wrapper => :prepend do %>
     <span class="add-on"><%= t('number.currency.format.unit')%></span><%= f.text_field :valor, class: :currency %>
   <% end %>

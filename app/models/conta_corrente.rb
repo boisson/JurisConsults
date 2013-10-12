@@ -8,4 +8,12 @@ class ContaCorrente < ActiveRecord::Base
 
   belongs_to :contrato
   attr_accessible :date, :valor
+
+  validates :date,
+            :presence => true
+  validates :valor,
+            :presence => true
+  validates :contrato_id,
+            :presence => true
+
 end

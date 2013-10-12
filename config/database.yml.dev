@@ -1,13 +1,15 @@
 development:
-  adapter: sqlserver
-  database: 
-  username: 
-  password: 
-  dataserver: 
+  adapter: postgresql
+  encoding: unicode
+  database: JurisConsults_development
+  pool: 5
+  username: postgres
+  password: alberico
 
 production:
-  adapter: sqlserver
-  database: 
-  username: 
-  password: 
-  dataserver: 
+  adapter: postgresql
+  encoding: unicode
+  database: JurisConsults_development
+  pool: 5
+  username: postgres
+  password: alberico

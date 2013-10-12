@@ -8,4 +8,7 @@ class FormaPagamento < ActiveRecord::Base
 
   belongs_to :tipo_pagamento
   attr_accessible :name
+  validates :name,
+            :presence => true,
+            :uniqueness => true
 end

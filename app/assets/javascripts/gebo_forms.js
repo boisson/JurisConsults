@@ -130,6 +130,16 @@ gebo_datatables = {
     gebo_datatables.ransack_binds()
   },
 
+  visible_columns_indexes: function(datatable_id){
+    var hide_columns       = []
+    var oTable             = $(datatable_id).dataTable()
+    $.each(oTable.fnSettings().aoColumns, function(i,value){
+      if(value.sName != '' && value.sName != undefined && value.bVisible){
+        hide_columns.push(i)
+      }
+    })
+  },
+
   crud_buttons: function(datatable_id, columns){
     return [
       {
@@ -142,7 +152,7 @@ gebo_datatables = {
       }, {
         "sExtends": "copy",
         'sButtonText': '<i class="icon-random"></i> ' + terms['copy'],
-        "mColumns": columns,
+        "mColumns": 'visible',
         "sToolTip": terms['copy_hint']
       }, {
         "fnClick": function(nButton, oConfig, oFlash) {
@@ -702,17 +712,24 @@ gebo_datatables = {
         '</div>'+
       '</div>'
 
-    $('.dt_export_actions').html(export_actions);
+    
+
+    // Change element sDom to apply permission on export
+    if($(datatable_id).data('permissions') != undefined && $.inArray('export', $(datatable_id).data('permissions').split(',')) == -1){
+      $('.dt_export_actions').remove()
+    }else{
+      $('.dt_export_actions').html(export_actions);
+      $('#slt-export').qtip($.extend({}, qtip_css_custom, {
+        position: {
+          my: "left center",
+          at: "right center",
+          viewport: $(window)
+        }
+      }));
+    }
+
     $('.dt_other_actions #dt-editing-title').remove()
     $('.dt_other_actions').prepend('<div id="dt-editing-title">'+ terms['editing'] +'</div>')
-    $('#slt-export').qtip($.extend({}, qtip_css_custom, {
-      position: {
-        my: "left center",
-        at: "right center",
-        viewport: $(window)
-      }
-    }));
-
     $('.dt_other_actions button[title!=""],.dt_other_actions div[title!=""]').each(function(){
       $(this).qtip($.extend({}, qtip_css_custom, {
         position: {

@@ -5,4 +5,7 @@ class Local < ActiveRecord::Base
   validates :name,
             :presence => true
   attr_accessible :name
+  validates :name,
+            :presence => true,
+            :uniqueness => true
 end

@@ -3,6 +3,7 @@ class Reu < ActiveRecord::Base
   has_paper_trail class_name: 'ReuVersion'
 	include RansackableAttributes
   validates :name,
-            :presence => true
+            :presence => true,
+            :uniqueness => true
   attr_accessible :bairro, :celular, :cep, :cidade, :cnpj, :comentario, :complemento, :contato, :cpf, :estado, :fax, :logradouro, :name, :numero, :telefone
 end

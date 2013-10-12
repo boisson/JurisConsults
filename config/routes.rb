@@ -1,4 +1,21 @@
 JurisConsults::Application.routes.draw do
+	match 'centro_custos/batch_destroy', :via => :delete
+  resources :centro_custos
+
+
+	match 'riscos/batch_destroy', :via => :delete
+  resources :riscos
+
+
+	match 'acompanhamentos/batch_destroy', :via => :delete
+  resources :acompanhamentos
+
+
+	match 'fases/batch_destroy', :via => :delete
+  resources :fases
+
+
+	paf_authorize 
 	match 'conta_correntes/batch_destroy', :via => :delete
   resources :conta_correntes
 

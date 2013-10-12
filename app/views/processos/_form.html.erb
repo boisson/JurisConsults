@@ -1,23 +1,35 @@
 <%= simple_form_for(@processo, html: {class: 'form-horizontal'}, remote: true) do |f| %>
   
   <%= f.input :numero, as: :string, input_html: {class: 'span5'} %>
-    
-  <%= f.input :ano, as: :string, input_html: {class: 'span5'} %>
+
+    <%= f.input :numero_principal, as: :string, input_html: {class: 'span5'} %>
+
+    <%= f.input :ano, as: :string, input_html: {class: 'span5'} %>
     
   <%= f.input :data_inicio, as: :datepicker %>
     
   <%= f.input :data_fim, as: :datepicker %>
-    
+
+  <%= f.association :fase, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.association :cliente, input_html: {class: 'span5 chosen-options'} %>
-    
-  <%= f.association :reu, input_html: {class: 'span5 chosen-options'} %>
-    
+
   <%= f.association :advogado, input_html: {class: 'span5 chosen-options'} %>
-    
+
+  <%= f.association :reu, input_html: {class: 'span5 chosen-options'} %>
+
+  <%= f.association :advogado_pc, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.association :local, input_html: {class: 'span5 chosen-options'} %>
-    
+
+  <%= f.association :local_principal, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.association :tipo_processo, input_html: {class: 'span5 chosen-options'} %>
-    
+
+  <%= f.association :centro_custo, input_html: {class: 'span5 chosen-options'} %>
+
+  <%= f.association :risco, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.input :custas, :wrapper => :prepend do %>
     <span class="add-on"><%= t('number.currency.format.unit')%></span><%= f.text_field :custas, class: :currency %>
   <% end %>

@@ -16,14 +16,14 @@
       'processo': 'Processos'
     attributes:
       'processo':
-        'numero': 'Número'
+        'numero': 'Número Inicial'
         'ano': 'Ano'
-        'data_inicio': 'Data início'
+        'data_inicio': 'Data distribuição'
         'data_fim': 'Data fim'
         'cliente': 'Cliente'
         'reu': 'Parte contrária'
         'advogado': 'Advogado'
-        'local': 'Local'
+        'local': 'Orgão inicial'
         'tipo_processo': 'Tipo de processo'
         'custas': 'Custas'
         'honorarios': 'Honorários'

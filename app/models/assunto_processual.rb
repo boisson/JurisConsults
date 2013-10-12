@@ -3,6 +3,7 @@ class AssuntoProcessual < ActiveRecord::Base
   has_paper_trail class_name: 'AssuntoProcessualVersion'
 	include RansackableAttributes
   validates :name,
-            :presence => true
+            :presence => true,
+            :uniqueness => true
   attr_accessible :name
 end

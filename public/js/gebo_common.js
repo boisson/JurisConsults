@@ -95,6 +95,8 @@
             });
             //* sidebar info box
             $('.sidebar').css('min-height','100%');
+            $('.sidebar').css('overflow-x','scroll');
+            $('.sidebar').css('height','300px');
             var s_box = $('.sidebar_info');
             s_box.css({
                 'margin-top'    : '-'+s_box.outerHeight()+'px',
@@ -109,7 +111,8 @@
       $('.main_content').css('min-height','');
             var mH = $('.main_content').height();
             var wH = $(window).height();
-            var sH = $('.sidebar_inner').height();
+            var sH = $('.sidebar_inner').height(); // should test if applications will be ok
+            var sH = $(window).height();
             
             if( (wH > sH) && (wH > mH) ) {
                 $('.main_content').css('min-height', wH - 94 );

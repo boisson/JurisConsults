@@ -8,5 +8,9 @@ class Contrato < ActiveRecord::Base
 
   belongs_to :processo
   belongs_to :forma_pagamento
+  belongs_to :tipo_processo
   attr_accessible :name, :saldo, :valor
+  validates :name,
+            :presence => true,
+            :uniqueness => true
 end

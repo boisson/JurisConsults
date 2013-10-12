@@ -122,6 +122,11 @@ module Rails
         # gsub_file 'config/routes.rb', "  resources :#{plural_table_name}", "  resources :#{plural_table_name} do\n    get 'batch_destroy', :on => :collection\n  end"
       end
 
+      def fix_rspecs
+        template('spec/controllers/controller_spec.rb', File.join('spec/controllers', "#{plural_table_name}_controller_spec.rb"))
+        create_file("spec/fixtures/#{plural_table_name}.yml")
+      end
+
     end
   end
 end

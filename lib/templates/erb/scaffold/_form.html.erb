@@ -8,13 +8,13 @@
   <% when :string %>
   <%%= f.input :<%= attribute.name %>, as: :string, input_html: {class: 'span5'} %>
   <% when :n_to_n_inline %>
-  <%%= f.association :<%= attribute.name %>, input_html: {class: 'span5 chosen-multiple'} %>
+  <%%= f.association :<%= attribute.name %>, collection: <%=attribute.name.singularize.classify%>.order('name ASC'), input_html: {class: 'span5 chosen-multiple'} %>
   <% when :n_to_n_2_columns %>
   <%%= f.input :<%= attribute.name %>, :wrapper => :prepend do %>
-    <div class="chosen-multiple-2-columns" id="nxn_<%= attribute.name %>" data-search-placeholder="<%%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%%= t('general.terms.multiple-select.deselect-all') %>"><%%= f.association :<%=attribute.name%> %></div>
+    <div class="chosen-multiple-2-columns" id="nxn_<%= attribute.name %>" data-search-placeholder="<%%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%%= t('general.terms.multiple-select.deselect-all') %>"><%%= f.association :<%=attribute.name%>, collection: <%=attribute.name.singularize.classify%>.order('name ASC') %></div>
   <%% end %>
   <% when :references %>
-  <%%= f.association :<%= attribute.name %>, input_html: {class: 'span5 chosen-options'} %>
+  <%%= f.association :<%= attribute.name %>, collection: <%=attribute.name.classify%>.order('name ASC'), input_html: {class: 'span5 chosen-options'} %>
   <% when :integer, :number %>
   <%%= f.input :<%= attribute.name %>, input_html: {class: 'spinner'} %>
   <% when :date %>

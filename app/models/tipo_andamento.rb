@@ -3,6 +3,7 @@ class TipoAndamento < ActiveRecord::Base
   has_paper_trail class_name: 'TipoAndamentoVersion'
 	include RansackableAttributes
   validates :name,
-            :presence => true
+            :presence => true,
+            :uniqueness => true
   attr_accessible :name
 end

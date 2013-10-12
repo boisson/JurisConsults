@@ -4,4 +4,7 @@ class TipoPagamento < ActiveRecord::Base
 	include RansackableAttributes
 
   attr_accessible :name, :periodicidade
+  validates :name,
+           :presence => true,
+           :uniqueness => true
 end

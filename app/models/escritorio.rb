@@ -10,4 +10,8 @@ class Escritorio < ActiveRecord::Base
   validates :name,
             :presence => true
   attr_accessible :advogados, :bairro, :cep, :cidade, :complemento, :estado, :logradouro, :name, :numero
+
+  validates :name,
+            :presence => true,
+            :uniqueness => true
 end

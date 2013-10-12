@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131004232222) do
+ActiveRecord::Schema.define(:version => 20131012112933) do
+
+  create_table "acompanhamento_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "acompanhamento_versions", ["item_type", "item_id"], :name => "index_acompanhamento_versions_on_item_type_and_item_id"
+
+  create_table "acompanhamentos", :force => true do |t|
+    t.integer  "contratos_id"
+    t.date     "data"
+    t.time     "hora"
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "acompanhamentos", ["contratos_id"], :name => "index_acompanhamentos_on_contratos_id"
 
   create_table "advogado_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -112,6 +135,24 @@ ActiveRecord::Schema.define(:version => 20131004232222) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "centro_custo_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "centro_custo_versions", ["item_type", "item_id"], :name => "index_centro_custo_versions_on_item_type_and_item_id"
+
+  create_table "centro_custos", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
     t.string   "data_content_type"
@@ -204,6 +245,10 @@ ActiveRecord::Schema.define(:version => 20131004232222) do
     t.float    "saldo"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.date     "dt_fim"
+    t.date     "dt_assinatura"
+    t.date     "dt_inicio"
+    t.integer  "tipo_processo_id"
   end
 
   add_index "contratos", ["forma_pagamento_id"], :name => "index_contratos_on_forma_pagamento_id"
@@ -232,6 +277,24 @@ ActiveRecord::Schema.define(:version => 20131004232222) do
     t.string   "estado"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "fase_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "fase_versions", ["item_type", "item_id"], :name => "index_fase_versions_on_item_type_and_item_id"
+
+  create_table "fases", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "forma_pagamento_versions", :force => true do |t|
@@ -297,11 +360,19 @@ ActiveRecord::Schema.define(:version => 20131004232222) do
     t.integer  "tipo_processo_id"
     t.float    "custas"
     t.float    "honorarios"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "numero_principal"
+    t.date     "distribuicao"
+    t.integer  "risco_id"
+    t.integer  "local_principal_id"
+    t.integer  "centro_custo_id"
+    t.integer  "fase_id"
+    t.integer  "advogados_pc_id"
   end
 
   add_index "processos", ["advogado_id"], :name => "index_processos_on_advogado_id"
+  add_index "processos", ["advogados_pc_id"], :name => "index_processos_on_advogados_pc_id"
   add_index "processos", ["cliente_id"], :name => "index_processos_on_cliente_id"
   add_index "processos", ["local_id"], :name => "index_processos_on_local_id"
   add_index "processos", ["reu_id"], :name => "index_processos_on_reu_id"
@@ -344,6 +415,24 @@ ActiveRecord::Schema.define(:version => 20131004232222) do
     t.string   "fax"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "risco_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "risco_versions", ["item_type", "item_id"], :name => "index_risco_versions_on_item_type_and_item_id"
+
+  create_table "riscos", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sessions", :force => true do |t|

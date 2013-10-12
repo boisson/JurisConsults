@@ -8,20 +8,17 @@ class Advogado < ActiveRecord::Base
             uniqueness: true
 
   validates :cpf,
-            length: { minimum: 11, maximum: 11},
-            uniqueness: true ,
-            numericality: { only_integer: true }
+            length: { minimum: 0, maximum: 11},
+            uniqueness: true
 
   validates :oab,
             uniqueness: true
 
   validates :numero,
-            numericality: { only_integer: true },
             length: {maximum: 10}
 
   validates :cep,
-            length: { maximum: 8},
-            numericality: { only_integer: true }
+            length: { maximum: 8}
 
   validates :bairro, length: {maximum: 40 }
   validates :cidade, length: {maximum: 40 }

@@ -647,7 +647,7 @@ TableTools.prototype = {
     this.s.select.postSelected = this.s.custom.fnRowSelected;
     this.s.select.postDeselected = this.s.custom.fnRowDeselected;
     this.s.select.selectedClass = this.s.custom.sSelectedClass;
-    
+
     /* Button set */
     var crud_datatable  = $(this.dom.table)
     if(crud_datatable.data('permissions') != undefined){
@@ -656,18 +656,16 @@ TableTools.prototype = {
       var newButtons = []
       var permissions_associations = {
         0: 'import',
-        1: 'print',
-        2: 'copy',
-        3: 'export'
+        1: 'copy',
+        3: 'print'
       }
 
+      // Remove buttons
       $.each(this.s.custom.aButtons, function(index,value){
         var current_button_group_position = index;
-        if(index >= 3){
-          current_button_group_position = 3;
-        }
-
-        if($.inArray(permissions_associations[current_button_group_position], allowed_actions) != -1){
+        if(index > 3 || index == 2){
+          newButtons.push(value)
+        }else if($.inArray(permissions_associations[current_button_group_position], allowed_actions) != -1){
           newButtons.push(value)
         }
       })
@@ -884,8 +882,6 @@ TableTools.prototype = {
    */
   "_fnCollectionShow": function ( nButton, oConfig )
   {
-    $(nButton).append('ola')
-    console.log(oConfig)
     var
       that = this,
       oPos = $(nButton).offset(),
@@ -1536,7 +1532,18 @@ TableTools.prototype = {
     {
       for ( i=0, iLen=dt.aoColumns.length ; i<iLen ; i++ )
       {
-        aColumns.push( dt.aoColumns[i].bVisible ? true : false );
+        if(jQuery('#'+dt.sTableId).hasClass('crud_datatable') && dt.aoColumns[i].bVisible){
+          if(i == 0 || i == (iLen - 1)){
+            aColumns.push(false);
+          }else{
+            aColumns.push(true);
+          }
+          
+        }else if(!jQuery('#'+dt.sTableId).hasClass('crud_datatable') && dt.aoColumns[i].bVisible){
+          aColumns.push(true);
+        }else{
+          aColumns.push(false);
+        }
       }
     }
     else if ( mColumns == "hidden" )
