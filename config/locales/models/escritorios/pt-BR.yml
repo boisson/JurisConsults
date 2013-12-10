@@ -4,7 +4,7 @@
       index: 'Escritórios'
   general:
     forms:
-      'escritorio':
+      'escritório':
 
   activerecord:
     models:

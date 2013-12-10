@@ -1,15 +1,33 @@
-GIT
-  remote: https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git
-  revision: 2ff2c84b526d1b8f4dbe8cc3a3a870b5a30cb9d3
+PATH
+  remote: ~/paf-application
+  specs:
+    proteste_generate_application (0.1.50)
+      ZenTest (= 4.8.3)
+      actionpack
+      activemodel
+      httparty
+      rubyzip (~> 0.9.9)
+
+PATH
+  remote: ~/paf-auth
+  specs:
+    proteste_auth (0.1.10)
+      ZenTest (= 4.8.3)
+      actionpack
+      activemodel
+      omniauth
+      omniauth-oauth2
+
+PATH
+  remote: ~/paf-authorize
   specs:
     proteste_authorize (0.2.17)
       ZenTest (= 4.8.3)
       actionpack
       nokogiri
 
-GIT
-  remote: https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git
-  revision: 4614ddfcbdbe67b8019566867abd4d20c4d3a046
+PATH
+  remote: ~/paf-scaffold
   specs:
     proteste_scaffold (0.3.36)
       ZenTest (= 4.8.3)
@@ -34,28 +52,6 @@ GIT
       therubyracer
       twitter-bootstrap-rails
       will_paginate
-
-GIT
-  remote: https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git
-  revision: 6f340a64f63c74deca22067ec106febe83b507a5
-  specs:
-    proteste_auth (0.1.10)
-      ZenTest (= 4.8.3)
-      actionpack
-      activemodel
-      omniauth
-      omniauth-oauth2
-
-GIT
-  remote: https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git
-  revision: 656acc81aae0f946539237c29765978d3b969da8
-  specs:
-    proteste_generate_application (0.1.50)
-      ZenTest (= 4.8.3)
-      actionpack
-      activemodel
-      httparty
-      rubyzip (~> 0.9.9)
 
 GEM
   remote: https://rubygems.org/

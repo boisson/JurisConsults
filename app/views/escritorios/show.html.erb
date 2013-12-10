@@ -1,50 +1,56 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @escritorio.name %>
+<p id="notice">
+	<%= notice %>
 </p>
 
 <p>
-  <b>Logradouro:</b>
-  <%= @escritorio.logradouro %>
+	<b>Name:</b>
+	<%= @escritorio.name %>
 </p>
 
 <p>
-  <b>Numero:</b>
-  <%= @escritorio.numero %>
+	<b>Logradouro:</b>
+	<%= @escritorio.logradouro %>
 </p>
 
 <p>
-  <b>Complemento:</b>
-  <%= @escritorio.complemento %>
+	<b>Numero:</b>
+	<%= @escritorio.numero %>
 </p>
 
 <p>
-  <b>Bairro:</b>
-  <%= @escritorio.bairro %>
+	<b>Complemento:</b>
+	<%= @escritorio.complemento %>
 </p>
 
 <p>
-  <b>Cep:</b>
-  <%= @escritorio.cep %>
+	<b>Bairro:</b>
+	<%= @escritorio.bairro %>
 </p>
 
 <p>
-  <b>Cidade:</b>
-  <%= @escritorio.cidade %>
+	<b>Cep:</b>
+	<%= @escritorio.cep %>
 </p>
 
 <p>
-  <b>Estado:</b>
-  <%= @escritorio.estado %>
+	<b>Cidade:</b>
+	<%= @escritorio.cidade %>
 </p>
 
 <p>
-  <b>Advogados:</b>
-  <%= @escritorio.advogados %>
+	<b>Estado:</b>
+	<%= @escritorio.estado %>
 </p>
 
+<p>
+	<b>Advogados:</b>
+	
+	<%= @escritorio.advogados.each do |advogado| %>
+          <%= advogado.[:name] %>
+    <% end -%>
+ 
+    
+</p
 
 <%= link_to 'Edit', edit_escritorio_path(@escritorio) %> |
 <%= link_to 'Back', escritorios_path %>

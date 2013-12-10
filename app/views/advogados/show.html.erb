@@ -52,12 +52,12 @@
 
 <p>
   <b>Curriculo:</b>
-  <%= @advogado.curriculo %>
+  <%= @advogado.simple_format(curriculo) %>
 </p>
 
 <p>
   <b>Comentario:</b>
-  <%= @advogado.comentario %>
+  <%= @advogado.simple_format(comentario) %>
 </p>
 
 <p>

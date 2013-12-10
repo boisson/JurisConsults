@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'proteste_generate_application', :git => 'https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git'
+#gem 'proteste_generate_application', :git => 'https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git'
+gem 'proteste_generate_application', :path => '~/paf-application' 
 gem 'pg'
 
 # Gems used only for assets and not required
@@ -33,9 +34,13 @@ end
 # To use debugger
 # gem 'debugger'
 
-gem 'proteste_scaffold',    git: 'https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git'
-gem 'proteste_auth',        git: 'https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git'
-gem 'proteste_authorize',   git: 'https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git'
+gem 'proteste_scaffold',  :path => '~/paf-scaffold'
+gem 'proteste_auth',      :path => '~/paf-auth'
+gem 'proteste_authorize', :path => '~/paf-authorize'
+
+#gem 'proteste_scaffold',    git: 'https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git'
+#gem 'proteste_auth',        git: 'https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git'
+#gem 'proteste_authorize',   git: 'https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git'
 group :development, :test do
   gem "rspec"
   gem "rspec-rails"
