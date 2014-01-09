@@ -21,7 +21,7 @@ Os serviços são disponibilizados da seguinte forma:
 Estruturalmente o projeto integra com um sistema de controle de acesso.
 
 Assim podemos dizer que temos 3 servidores rodando concomitantes.
-Estando dentro do repositório utilizar o comando para iniciação
+Estando dentro do repositório utilizar o comando para inicialização.
 
 == Servidor de Controle de Autenticação e Autenticidade
 
@@ -36,4 +36,6 @@ Estando dentro do repositório utilizar o comando para iniciação
    rails s -p 3001
 
 
+
+Todos os direitos registrados para KnowTecnology Consultoria de Soluções em TI
 
