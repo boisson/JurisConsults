@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131012112933) do
+ActiveRecord::Schema.define(:version => 20140109120857) do
 
   create_table "acompanhamento_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -275,8 +275,14 @@ ActiveRecord::Schema.define(:version => 20131012112933) do
     t.string   "cep"
     t.string   "cidade"
     t.string   "estado"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "missao"
+    t.string   "valores"
+    t.string   "quemsomos"
+    t.string   "cnpj"
+    t.string   "ie"
+    t.boolean  "is_pj",       :default => true
   end
 
   create_table "fase_versions", :force => true do |t|
@@ -369,6 +375,7 @@ ActiveRecord::Schema.define(:version => 20131012112933) do
     t.integer  "centro_custo_id"
     t.integer  "fase_id"
     t.integer  "advogados_pc_id"
+    t.string   "name"
   end
 
   add_index "processos", ["advogado_id"], :name => "index_processos_on_advogado_id"

@@ -4,16 +4,16 @@
       index: 'Reus'
   general:
     forms:
-      'reu':
+      'Parte Contrária':
 
   activerecord:
     models:
-      'reu': 'Reus'
+      'reu': 'Parte Contrária'
     attributes:
       'reu':
         'name': 'Nome'
-        'cpf': 'Cpf'
-        'cnpj': 'Cnpj'
+        'cpf': 'CPF'
+        'cnpj': 'CNPJ'
         'contato': 'Contato'
         'logradouro': 'Logradouro'
         'numero': 'Número'

@@ -8,12 +8,13 @@ class ClientesController < ApplicationController
   end
   
   # GET /clientes/1
-  # GET /clientes/1.json
+  #GET /clientes/1.json
   def show
     @cliente = Cliente.find(params[:id])
 
     respond_to do |format|
       format.json { render json: @cliente }
+      format.html { render layout: nil }
       format.js
     end
   end
