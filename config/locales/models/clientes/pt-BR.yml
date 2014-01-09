@@ -13,8 +13,8 @@
     attributes:
       'cliente':
         'name': 'Nome'
-        'cpf': 'Cpf'
-        'cnpj': 'Cnpj'
+        'cpf': 'CPF'
+        'cnpj': 'CNPJ'
         'situacao': 'Situação'
         'logradouro': 'Logradouro'
         'numero': 'Número'

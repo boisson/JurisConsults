@@ -1,6 +1,6 @@
 <p>
   <strong><%= Andamento.human_attribute_name :processo %>:</strong>
-  <%= @andamento.processo %>
+  <%= @andamento.processo.numero %>
 </p>
 
 <p>
@@ -15,17 +15,17 @@
 
 <p>
   <strong><%= Andamento.human_attribute_name :tipo_andamento %>:</strong>
-  <%= @andamento.tipo_andamento %>
+  <%= @andamento.tipo_andamento.name %>
 </p>
 
 <p>
   <strong><%= Andamento.human_attribute_name :situacao %>:</strong>
-  <%= @andamento.situacao %>
+  <%= @andamento.situacao.name %>
 </p>
 
 <p>
   <strong><%= Andamento.human_attribute_name :comentario %>:</strong>
-  <%= @andamento.comentario %>
+  <%= @andamento.comentario.to_s %>
 </p>
 
 

@@ -11,4 +11,4 @@
       'fase': 'Fases'
     attributes:
       'fase':
-        'name': 'Name'
+        'name': 'Nome'

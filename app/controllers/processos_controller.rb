@@ -22,7 +22,7 @@ class ProcessosController < ApplicationController
   # GET /processos/new.json
   def new
     @processo = Processo.new
-
+   
     respond_to do |format|
       format.html { render layout: nil } # new.html.erb
       format.json { render json: @processo }
@@ -42,7 +42,7 @@ class ProcessosController < ApplicationController
   # POST /processos.json
   def create
     @processo = Processo.new(params[:processo])
-
+    @processo.name = @processo.numero
     respond_to do |format|
       if @processo.save
         if params[:submit_and_go_to_new]
@@ -65,9 +65,11 @@ class ProcessosController < ApplicationController
   # PUT /processos/1
   # PUT /processos/1.json
   def update
+
     @processo = Processo.find(params[:id])
 
     respond_to do |format|
+    	@processo.name = @processo.numero
       if @processo.update_attributes(params[:processo])
         flash[:notice] = t('general.messages.update_success', model_name: t('activerecord.models.processo'))
         format.html { redirect_to edit_processo_path(@processo) }

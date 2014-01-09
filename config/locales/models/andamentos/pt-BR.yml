@@ -19,3 +19,4 @@
         'tipo_andamento': 'Tipo de andamento'
         'situacao': 'Situação'
         'comentario': 'Comentário'
+        'prazo': 'Prazo em dias'

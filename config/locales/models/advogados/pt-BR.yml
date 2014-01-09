@@ -12,7 +12,7 @@
     attributes:
       'advogado':
         'name': 'Nome'
-        'cpf': 'Cpf'
+        'cpf': 'CPF'
         'oab': 'OAB'
         'logradouro': 'Logradouro'
         'numero': 'Número'

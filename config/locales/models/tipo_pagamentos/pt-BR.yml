@@ -8,8 +8,8 @@
 
   activerecord:
     models:
-      'tipo_pagamento': 'Tipo pagamentos'
+      'tipo_pagamento': 'Tipo de pagamentos'
     attributes:
       'tipo_pagamento':
-        'name': 'Name'
-        'periodicidade': 'Periodicidade'
+        'name': 'Nome'
+        'periodicidade': 'Periodicidade em dias'

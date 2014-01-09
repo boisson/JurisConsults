@@ -23,7 +23,10 @@ protected
 
   def fetch_results
     results = build_result
-      .joins('LEFT JOIN advogados_escritorios ON escritorios.id = advogados_escritorios.escritorio_id LEFT JOIN advogados ON advogados_escritorios.advogado_id = advogados.id')
+    
+   #   Comentado porque duplica a resultado de números de escritórios - Victor
+   #   .joins('LEFT JOIN advogados_escritorios ON escritorios.id = advogados_escritorios.escritorio_id
+   #   LEFT JOIN advogados ON advogados_escritorios.advogado_id = advogados.id
       
 
     if merged_params[:sSearch].present?
