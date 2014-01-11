@@ -67,6 +67,29 @@ JurisConsults::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.asset_host = "http://knowauth.herokuapp.com/"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'knowauth.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp # change to :smtp to send
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.knowtechnology.com.br",
+    :port                 => 587,
+    :domain               => "knowtechnology.com.br"
+    # :port                 => 587,
+    # :address              => "smtp.gmail.com",
+    # :domain               => 'gmail.com',
+    :user_name            => 'suporte@knowtechnology.com.br',
+    :password             => 'Alb#1108',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
+
+  config.acccess_control_2_api_url = 'http://wsauth.herokuapp.com'
+  config.acccess_control_2_url = 'http://knowauth.herokuapp.com/'
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
