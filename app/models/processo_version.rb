@@ -1,4 +1,4 @@
-class ProcessoVersion < Version
+class ProcessoVersion < PaperTrail::Version
   self.table_name = :processo_versions
   belongs_to :user, foreign_key: :whodunnit
 end
