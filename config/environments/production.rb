@@ -77,7 +77,7 @@ JurisConsults::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.knowtechnology.com.br",
     :port                 => 587,
-    :domain               => "knowtechnology.com.br"
+    :domain               => "knowtechnology.com.br",
     # :port                 => 587,
     # :address              => "smtp.gmail.com",
     # :domain               => 'gmail.com',
