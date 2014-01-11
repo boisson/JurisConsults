@@ -1,6 +1,6 @@
 JurisConsults::Application.configure do
-  config.acccess_control_2_url = 'http://localhost:3000'
-  config.acccess_control_2_api_url = 'http://localhost:9999'
+  config.acccess_control_2_url = 'http://knowauth.herokuapp.com'
+  config.acccess_control_2_api_url = 'http://wsauth.herokuapp.com'
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -66,4 +66,13 @@ JurisConsults::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

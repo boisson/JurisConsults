@@ -1,1 +1,1 @@
-rvm use 1.9.3@teste_paf
+rvm use ruby-1.9.3@jurisConsults --create
