@@ -69,10 +69,10 @@ JurisConsults::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.asset_host = "http://knowauth.herokuapp.com/"
+  config.action_mailer.asset_host = "http://jurisconsults.herokuapp.com/"
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'knowauth.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'jurisconsults.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp # change to :smtp to send
   config.action_mailer.smtp_settings = {
     :address              => "smtp.knowtechnology.com.br",
