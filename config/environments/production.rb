@@ -1,6 +1,4 @@
 JurisConsults::Application.configure do
-  config.acccess_control_2_url = 'http://knowauth.herokuapp.com'
-  config.acccess_control_2_api_url = 'http://wsauth.herokuapp.com'
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -88,7 +86,7 @@ JurisConsults::Application.configure do
   }
 
   config.acccess_control_2_api_url = 'http://wsauth.herokuapp.com'
-  config.acccess_control_2_url = 'http://knowauth.herokuapp.com/'
+  config.acccess_control_2_url = 'http://knowauth.herokuapp.com'
 
   config.paperclip_defaults = {
     :storage => :s3,
