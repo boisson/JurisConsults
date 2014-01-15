@@ -8,7 +8,7 @@
 
   activerecord:
     models:
-      'reu': 'Parte Contrária'
+      'reu': '"Ex Adversus"'
     attributes:
       'reu':
         'name': 'Nome'
@@ -21,7 +21,7 @@
         'bairro': 'Bairro'
         'cidade': 'Cidade'
         'estado': 'Estado'
-        'cep': 'Cep'
+        'cep': '"Cep"CEP'
         'comentario': 'Comentário'
         'telefone': 'Telefone'
         'celular': 'Celular'

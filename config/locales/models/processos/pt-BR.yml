@@ -17,13 +17,15 @@
     attributes:
       'processo':
         'numero': 'Número Inicial'
+        'numero_principal': Número Principal'
         'ano': 'Ano'
         'data_inicio': 'Data distribuição'
         'data_fim': 'Data fim'
         'cliente': 'Cliente'
         'reu': 'Parte contrária'
         'advogado': 'Advogado'
-        'local': 'Orgão inicial'
+        'local': 'Orgão Competente'
+        'local_principal': 'Varas'
         'tipo_processo': 'Tipo de processo'
         'custas': 'Custas'
         'honorarios': 'Honorários'

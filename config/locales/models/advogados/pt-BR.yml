@@ -20,7 +20,7 @@
         'bairro': 'Bairro'
         'cidade': 'Cidade'
         'estado': 'Estado'
-        'cep': 'Cep'
+        'cep': 'CEP'
         'curriculo': 'Curriculo'
         'comentario': 'Comentário'
         'situacao': 'Situação'

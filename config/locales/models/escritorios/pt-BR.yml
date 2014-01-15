@@ -16,7 +16,7 @@
         'numero': 'Número'
         'complemento': 'Complemento'
         'bairro': 'Bairro'
-        'cep': 'Cep'
+        'cep': 'CEP'
         'cidade': 'Cidade'
         'estado': 'Estado'
         'advogados': 'Advogados'
