@@ -1,6 +1,4 @@
 JurisConsults::Application.configure do
-  config.acccess_control_2_url = 'http://localhost:3000'
-  config.acccess_control_2_api_url = 'http://localhost:9999'
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -11,13 +9,14 @@ JurisConsults::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
+  config.assets.js_compressor = :uglifier
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -66,4 +65,36 @@ JurisConsults::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.asset_host = "http://jurisconsults.herokuapp.com/"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'jurisconsults.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp # change to :smtp to send
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.knowtechnology.com.br",
+    :port                 => 587,
+    :domain               => "knowtechnology.com.br",
+    # :port                 => 587,
+    # :address              => "smtp.gmail.com",
+    # :domain               => 'gmail.com',
+    :user_name            => 'suporte@knowtechnology.com.br',
+    :password             => 'Alb#1108',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
+
+  config.acccess_control_2_api_url = 'http://wsauth.herokuapp.com'
+  config.acccess_control_2_url = 'http://knowauth.herokuapp.com'
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

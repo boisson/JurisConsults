@@ -1,3 +1,3 @@
-Version.module_eval do
+PaperTrail::Version.module_eval do
   self.abstract_class = true
 end

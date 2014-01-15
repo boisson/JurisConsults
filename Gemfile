@@ -1,23 +1,17 @@
 source 'https://rubygems.org'
 
+ruby "1.9.3"
+
 gem 'rails', '3.2.13'
-#gem 'proteste_generate_application', :git => 'https://7f48847aabeed11d9f0e1358ef171debccfb79a6:x-oauth-basic@github.com/proteste/paf-application.git'
-gem 'proteste_generate_application', :path => '~/paf-application' 
+
 gem 'pg'
+gem 'aws-sdk'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
+gem 'uglifier', '>= 1.0.3'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-# gem 'jquery-rails'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', :platforms => :ruby
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -26,7 +20,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -34,18 +28,19 @@ end
 # To use debugger
 # gem 'debugger'
 
-gem 'proteste_scaffold',  :path => '~/paf-scaffold'
-gem 'proteste_auth',      :path => '~/paf-auth'
-gem 'proteste_authorize', :path => '~/paf-authorize'
-
-#gem 'proteste_scaffold',    git: 'https://4347f04925c36c7c6c8b477cf89d55cefbc070b1:x-oauth-basic@github.com/proteste/paf-scaffold.git'
-#gem 'proteste_auth',        git: 'https://54ce42d5673c0aa07bbfbb4d8b77f79e1e6a5f23:x-oauth-basic@github.com/proteste/paf-auth.git'
-#gem 'proteste_authorize',   git: 'https://0f022deb564668d3c9dcbdc6f17cf2f07b6ffdc4:x-oauth-basic@github.com/proteste/paf-authorize.git'
 group :development, :test do
   gem "rspec"
   gem "rspec-rails"
 end
 
+gem 'proteste_generate_application',  :git => 'https://98a5a04119213007d2f9aab95cbf4782d169a712:x-oauth-basic@github.com/boisson/paf-application.git'
+gem 'proteste_auth',        git: 'https://e699b5e85333455ddbef769d200a7af33cf8f21d:x-oauth-basic@github.com/boisson/paf-auth.git'
+gem 'proteste_authorize',   git: 'https://5653364f54bf454eb28eeebe5f81c1b0628b30ac:x-oauth-basic@github.com/boisson/paf-authorize.git'
+gem 'proteste_scaffold',    git: 'https://b164a6b3d03ec3e35810b9d0db847d5f33faefeb:x-oauth-basic@github.com/boisson/paf-scaffold.git'
+# gem 'proteste_generate_application',  :path => '/compartilhado/htdocs/vivace/boisson/paf-application'
+# gem 'proteste_auth',      :path => '/compartilhado/htdocs/vivace/boisson/paf-auth'
+# gem 'proteste_authorize', :path => '/compartilhado/htdocs/vivace/boisson/paf-authorize'
+# gem 'proteste_scaffold',  :path => '/compartilhado/htdocs/vivace/boisson/paf-scaffold'
 
 #============= Attention
 #- Store this values save on Application entity in Access Control 2
