@@ -13,8 +13,8 @@ protected
         check_box_tag(:'ids[]', contrato.id),
         link_to(contrato.id,contrato_path(contrato), remote: true),
         input_text(contrato,contrato.name, :name),
-        ((contrato.processo.name rescue contrato.processo.id) if contrato.processo),
         input_text(contrato,contrato.valor, :valor),
+        (contrato.processo.collect{|t| t.name }.sort.to_sentence rescue contrato.processos.collect{|t| t.name }.to_sentence),
         ((contrato.forma_pagamento.name rescue contrato.forma_pagamento.id) if contrato.forma_pagamento),
         input_text(contrato,contrato.saldo, :saldo),
         crud_buttons(contrato)
@@ -24,14 +24,12 @@ protected
 
   def fetch_results
     results = build_result
-      .joins('LEFT JOIN processos ON contratos.processo_id = processos.id')
       .joins('LEFT JOIN forma_pagamentos ON contratos.forma_pagamento_id = forma_pagamentos.id')
       
 
     if merged_params[:sSearch].present?
       results = results.where("contratos.id LIKE :search OR 
 			contratos.name LIKE :search OR 
-			processos.id LIKE :search OR processos.name LIKE :search OR 
 			contratos.valor LIKE :search OR 
 			forma_pagamentos.id LIKE :search OR forma_pagamentos.name LIKE :search OR 
 			contratos.saldo LIKE :search", search: "%#{merged_params[:sSearch]}%")

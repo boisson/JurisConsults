@@ -8,8 +8,6 @@
 
   <%= f.input :dt_fim, as: :datepicker %>
     
-  <%= f.association :processo, input_html: {class: 'span5 chosen-options'} %>
-
   <%= f.association :tipo_processo, input_html: {class: 'span5 chosen-options'} %>
 
   <%= f.input :valor, :wrapper => :prepend do %>
@@ -20,6 +18,10 @@
     
   <%= f.input :saldo, :wrapper => :prepend do %>
     <span class="add-on"><%= t('number.currency.format.unit')%></span><%= f.text_field :saldo, class: :currency %>
+  <% end %>
+  
+  <%= f.input :processos, :wrapper => :prepend do %>
+    <div class="chosen-multiple-2-columns" id="nxn_processos" data-search-placeholder="<%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%= t('general.terms.multiple-select.deselect-all') %>"><%= f.association :processos %></div>
   <% end %>
   
   <div class="form-actions">

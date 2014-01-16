@@ -1,0 +1,7 @@
+<%= datatable_build_table('contratos_processos_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%= ContratosProcesso.human_attribute_name :id %></th>
+  <th><%= ContratosProcesso.human_attribute_name :contrato %></th>
+  <th><%= ContratosProcesso.human_attribute_name :processo %></th>
+  <th width="226"></th>
+<% end -%>

@@ -12,6 +12,7 @@ end
 module JurisConsults
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
+    config.assets.logger = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -53,7 +54,7 @@ module JurisConsults
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
-
+config.assets.logger = false
     # Enable the asset pipeline
     config.assets.enabled = true
 

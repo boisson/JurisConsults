@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contrato:</b>
+  <%= @contratos_processo.contrato %>
+</p>
+
+<p>
+  <b>Processo:</b>
+  <%= @contratos_processo.processo %>
+</p>
+
+
+<%= link_to 'Edit', edit_contratos_processos_path(@contratos_processo) %> |
+<%= link_to 'Back', contratos_processos_path %>
