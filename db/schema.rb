@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109120857) do
+ActiveRecord::Schema.define(:version => 20140116024524) do
 
   create_table "acompanhamento_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -283,6 +283,9 @@ ActiveRecord::Schema.define(:version => 20140109120857) do
     t.string   "cnpj"
     t.string   "ie"
     t.boolean  "is_pj",       :default => true
+    t.string   "telefone"
+    t.string   "fax"
+    t.string   "celular"
   end
 
   create_table "fase_versions", :force => true do |t|
@@ -379,8 +382,10 @@ ActiveRecord::Schema.define(:version => 20140109120857) do
   end
 
   add_index "processos", ["advogado_id"], :name => "index_processos_on_advogado_id"
+  add_index "processos", ["advogados_pc_id"], :name => "index_processos_on_advogados_pc_id"
   add_index "processos", ["cliente_id"], :name => "index_processos_on_cliente_id"
   add_index "processos", ["local_id"], :name => "index_processos_on_local_id"
+  add_index "processos", ["name"], :name => "index_processos_on_name"
   add_index "processos", ["reu_id"], :name => "index_processos_on_reu_id"
   add_index "processos", ["tipo_processo_id"], :name => "index_processos_on_tipo_processo_id"
 
@@ -421,6 +426,7 @@ ActiveRecord::Schema.define(:version => 20140109120857) do
     t.string   "fax"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "advogado_id"
   end
 
   create_table "risco_versions", :force => true do |t|
@@ -483,6 +489,25 @@ ActiveRecord::Schema.define(:version => 20140109120857) do
 
   create_table "tipo_andamentos", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_lancamento_versions", :force => true do |t|
+    t.string   "item_type",      :null => false
+    t.integer  "item_id",        :null => false
+    t.string   "event",          :null => false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "object_changes"
+    t.datetime "created_at"
+  end
+
+  add_index "tipo_lancamento_versions", ["item_type", "item_id"], :name => "index_tipo_lancamento_versions_on_item_type_and_item_id"
+
+  create_table "tipo_lancamentos", :force => true do |t|
+    t.string   "name"
+    t.string   "tipo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -4,6 +4,16 @@
 </p>
 
 <p>
+  <strong><%= Escritorio.human_attribute_name :cnpj %>:</strong>
+  <%= @escritorio.cnpj %>
+</p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :ie %>:</strong>
+  <%= @escritorio.ie %>
+</p>
+
+<p>
   <strong><%= Escritorio.human_attribute_name :logradouro %>:</strong>
   <%= @escritorio.logradouro %>
 </p>
@@ -37,11 +47,41 @@
   <strong><%= Escritorio.human_attribute_name :estado %>:</strong>
   <%= @escritorio.estado %>
 </p>
+<p>
+  <strong><%= Escritorio.human_attribute_name :telefone %>:</strong>
+  <%= @escritorio.telefone %>
+</p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :celular %>:</strong>
+  <%= @escritorio.celular %>
+</p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :fax %>:</strong>
+  <%= @escritorio.fax %>
+</p>
 
 <p>
   <strong><%= Escritorio.human_attribute_name :advogados %>:</strong>
   <%= @escritorio.advogados %>
 </p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :quemsomos %>:</strong>
+  <%= @escritorio.quemsomos %>
+</p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :missao %>:</strong>
+  <%= @escritorio.missao %>
+</p>
+
+<p>
+  <strong><%= Escritorio.human_attribute_name :valores %>:</strong>
+  <%= @escritorio.valores %>
+</p>
+
 
 
 <%= go_back_to_list %>

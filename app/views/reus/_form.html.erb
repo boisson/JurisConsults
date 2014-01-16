@@ -1,7 +1,9 @@
 <%= simple_form_for(@reu, html: {class: 'form-horizontal'}, remote: true) do |f| %>
   
   <%= f.input :name, as: :string, input_html: {class: 'span5'}, :placeholder => "nome completo" %>
-    
+  
+  <%= f.association :advogado, input_html: {class: 'span5 chosen-options'} %>
+
   <%= f.input :cpf, as: :string, input_html: {class: 'span5'}, :placeholder => "apenas os números" %>
     
   <%= f.input :cnpj, as: :string, input_html: {class: 'span5'}, :placeholder => "apenas os números"  %>

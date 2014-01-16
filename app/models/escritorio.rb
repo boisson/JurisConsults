@@ -9,7 +9,7 @@ class Escritorio < ActiveRecord::Base
 	include RansackableAttributes
   validates :name,
             :presence => true
-  attr_accessible :advogados, :bairro, :cep, :cidade, :complemento, :estado, :logradouro, :name, :numero
+  attr_accessible :advogados, :bairro, :cep, :cidade, :complemento, :estado, :logradouro, :name, :numero, :telefone, :fax, :celular, :quemsomos, :missao, :valores, :cnpj, :ie
 
   validates :name,
             :presence => true,

@@ -1,25 +1,41 @@
 <%= simple_form_for(@escritorio, html: {class: 'form-horizontal'}, remote: true) do |f| %>
   
-  <%= f.input :name, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :name, as: :string, input_html: {class: 'span5'}, :placeholder => "Razão Social ou Fantasia" %>
+  
+  <%= f.input :cnpj, as: :string, input_html: {class: 'span5'}, :placeholder => "apenas os números" %>
+  
+  <%= f.input :ie, as: :string, input_html: {class: 'span5'}, :placeholder => "apenas os números" %>
     
   <%= f.input :logradouro, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :numero, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :numero, as: :integer, input_html: {class: 'span5'}, :placeholder => "apenas os números" %>
     
-  <%= f.input :complemento, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :complemento, as: :string, input_html: {class: 'span5'}, :placeholder => "bloco, apartamento, letras" %>
     
   <%= f.input :bairro, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :cep, as: :string, input_html: {class: 'span5'} %>
-    
+  <%= f.input :cep, as: :string, input_html: {class: 'span5'} , :placeholder => "99.999-999"%>
+ 
   <%= f.input :cidade, as: :string, input_html: {class: 'span5'} %>
     
-  <%= f.input :estado, as: :string, input_html: {class: 'span5'} %>
+  <%= f.input :estado, as: :string, input_html: {class: 'span5'} , :placeholder => "RJ" %>
+  
+  <%= f.input :telefone, as: :string, input_html: {class: 'span5'}, :placeholder => "(99) 9999-9999" %>
+    
+  <%= f.input :celular, as: :string, input_html: {class: 'span5'}, :placeholder => "(99) 99999-9999" %>
+  
+  <%= f.input :fax, as: :string, input_html: {class: 'span5'}, :placeholder => "(99) 9999-9999" %>
     
   <%= f.input :advogados, :wrapper => :prepend do %>
     <div class="chosen-multiple-2-columns" id="nxn_advogados" data-search-placeholder="<%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%= t('general.terms.multiple-select.deselect-all') %>"><%= f.association :advogados %></div>
   <% end %>
   
+  <%= f.input :quemsomos, as: :ckeditor %>
+  
+  <%= f.input :missao, as: :ckeditor %>
+  
+  <%= f.input :valores, as: :ckeditor %>
+
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-primary' %>
     <%= f.button :submit, value: t('general.actions.save_and_go_to_new'), name: :submit_and_go_to_new, class: 'btn' %>

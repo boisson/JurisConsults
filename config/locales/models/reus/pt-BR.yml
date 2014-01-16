@@ -21,7 +21,7 @@
         'bairro': 'Bairro'
         'cidade': 'Cidade'
         'estado': 'Estado'
-        'cep': '"Cep"CEP'
+        'cep': 'CEP'
         'comentario': 'Comentário'
         'telefone': 'Telefone'
         'celular': 'Celular'

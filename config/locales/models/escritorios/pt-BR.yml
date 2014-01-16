@@ -20,3 +20,8 @@
         'cidade': 'Cidade'
         'estado': 'Estado'
         'advogados': 'Advogados'
+        'ie': 'Insc. Estadual'
+        'cnpj': 'CNPJ'
+        'quemsomos': 'Quem Somos'
+        'valores': 'Valores'
+        'missao': 'Missão'

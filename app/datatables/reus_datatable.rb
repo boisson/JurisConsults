@@ -14,7 +14,7 @@ protected
         link_to(reu.id,reu_path(reu), remote: true),
         input_text(reu,reu.name, :name),
         input_text(reu,reu.contato, :contato),
-         input_text(reu,reu.telefone, :telefone),
+        input_text(reu,reu.telefone, :telefone),
         input_text(reu,reu.celular, :celular),
         input_text(reu,reu.fax, :fax),
         crud_buttons(reu)

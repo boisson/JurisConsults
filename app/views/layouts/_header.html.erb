@@ -2,16 +2,8 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container-fluid">
-        <a class="brand" href="<%= root_path %>"><i class="icon-home icon-white"></i> <%= APPLICATION_CENTRAL_NAME %></a>
+        <a class="brand" href="<%= root_path %>"><i class="icon-home icon-white"></i> KnowTechnology</a>
         <ul class="nav user_menu pull-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-<%= current_language['code'] %>"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-            <% languages_except_current.each do |proteste_language| %>
-            <li><a href="<%=proteste_generate_application_change_locale_path(proteste_language['code'])%>"><i class="flag-<%=proteste_language['code']%>"></i> <%=proteste_language['name'] %></a></li>
-            <% end -%>
-            </ul>
-          </li>
           <li class="divider-vertical hidden-phone hidden-tablet"></li>
           <li><%=link_to '<i class="splashy-printer"></i>'.html_safe, 'javascript:window.print()', title: t('general.actions.print') %></li>
           <li class="divider-vertical hidden-phone hidden-tablet"></li>

@@ -52,12 +52,6 @@
   <strong><%= Cliente.human_attribute_name :cep %>:</strong>
   <%= @cliente.cep %>
 </p>
-
-<p>
-  <strong><%= Cliente.human_attribute_name :comentario %>:</strong>
-  <%= @cliente.comentario %>
-</p>
-
 <p>
   <strong><%= Cliente.human_attribute_name :telefone %>:</strong>
   <%= @cliente.telefone %>
@@ -72,6 +66,13 @@
   <strong><%= Cliente.human_attribute_name :fax %>:</strong>
   <%= @cliente.fax %>
 </p>
+
+<p>
+  <strong><%= Cliente.human_attribute_name :comentario %>:</strong>
+  <%= @cliente.comentario %>
+</p>
+
+
 
 
 <%= go_back_to_list %>
