@@ -1,0 +1,15 @@
+'en':
+  breadcrumbs:
+    'tipo_lancamentos':
+      index: 'Tipo de lançamentos'
+  general:
+    forms:
+      'tipo_lancamento':
+
+  activerecord:
+    models:
+      'tipo_lancamento': 'Tipo lancamentos'
+    attributes:
+      'tipo_lancamento':
+        'name': 'Nome'
+

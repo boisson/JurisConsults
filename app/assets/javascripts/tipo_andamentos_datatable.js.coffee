@@ -11,7 +11,6 @@ window.crud_datatable = $('#tipo_andamentos_datatable').dataTable
   aoColumns: [
     {sClass: "center"},
     {sClass: "center", sName: "tipo_andamentos.id"},
- 
     {sName: "tipo_andamentos.name"},
     {sClass: "center"}
   ]

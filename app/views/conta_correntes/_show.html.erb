@@ -1,17 +1,38 @@
 <p>
   <strong><%= ContaCorrente.human_attribute_name :date %>:</strong>
-  <%= @conta_corrente.date %>
+  <%= l @conta_corrente.date %>
 </p>
 
 <p>
   <strong><%= ContaCorrente.human_attribute_name :contrato %>:</strong>
-  <%= @conta_corrente.contrato %>
+  <%= @conta_corrente.contrato.name %>
+</p>
+
+<p>
+  <strong><%= ContaCorrente.human_attribute_name :tipo_lancamento %>:</strong>
+  <%= @conta_corrente.tipo_lancamento.name %>
+</p>
+
+<p>
+  <strong><%= ContaCorrente.human_attribute_name :forma_pagamento %>:</strong>
+  <%= @conta_corrente.forma_pagamento.name %>
+</p>
+
+<p>
+  <strong><%= ContaCorrente.human_attribute_name :tipo_pagamento %>:</strong>
+  <%= @conta_corrente.tipo_pagamento.name %>
 </p>
 
 <p>
   <strong><%= ContaCorrente.human_attribute_name :valor %>:</strong>
   <%= @conta_corrente.valor %>
 </p>
+
+<p>
+  <strong><%= ContaCorrente.human_attribute_name :confirmado %>:</strong>
+  <%= @conta_corrente.confirmado %>
+</p>
+
 
 
 <%= go_back_to_list %>

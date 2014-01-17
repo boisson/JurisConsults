@@ -7,15 +7,13 @@ window.crud_datatable = $('#conta_correntes_datatable').dataTable
   aLengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, terms['all']]]
   aaSorting: [[1, "desc"]]
   sAjaxSource: $('#conta_correntes_datatable').data('source')
-  aoColumnDefs: [{ "bSortable": false, "aTargets": [ 0, 5 ] }]
+  aoColumnDefs: [{ "bSortable": false, "aTargets": [ 0, 7 ] }]
   aoColumns: [
     {sClass: "center"},
     {sClass: "center", sName: "conta_correntes.id"},
- 
     {sName: "conta_correntes.date"},
- 
     {sName: "contratos.name"},
- 
+    {sName: "tipo_lancamentos.name"},
     {sName: "conta_correntes.valor"},
     {sClass: "center"}
   ]
@@ -34,3 +32,9 @@ window.advanced_search_columns =
   contrato: 'references'
  
   valor: 'float'
+  
+  tipo_pagamento: 'references'
+  
+  tipo_lancamento: 'references'
+  
+  forma_pagamento: 'references'

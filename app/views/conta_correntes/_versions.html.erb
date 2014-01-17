@@ -21,6 +21,16 @@
           <div><strong><%= ContaCorrente.human_attribute_name field %></strong>: <em><%= values[1] %></em></div>
         <% end -%>
       </td>
+      <td>
+        <% version.changeset.each do |field, values| %>
+          <div><strong><%= ContaCorrente.human_attribute_name field %></strong>: <em><%= values[2] %></em></div>
+        <% end -%>
+      </td>
+      <td>
+        <% version.changeset.each do |field, values| %>
+          <div><strong><%= ContaCorrente.human_attribute_name field %></strong>: <em><%= values[2] %></em></div>
+        <% end -%>
+      </td>
     <td><%= version.user.name rescue version.whodunnit %></td>
     </tr>
     <% end -%>

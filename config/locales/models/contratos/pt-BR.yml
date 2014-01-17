@@ -1,24 +1,30 @@
 'pt-BR':
+  date:
+    formats:
+      default: '%d/%m/%Y'
+  time:
+    formats:
+      short: '%d/%m, %H:%M h'
   breadcrumbs:
     'contratos':
       index: 'Contratos'
   general:
     forms:
       'contrato':
-        'choose_processo': 'Choose Processo'
-        'choose_forma_pagamento': 'Choose Forma pagamento'
+        'choose_processo': 'Escolha o Processo'
+        'choose_forma_pagamento': 'Escolha a Forma de pagamento'
 
   activerecord:
     models:
       'contrato': 'Contratos'
     attributes:
       'contrato':
-        'name': 'Name'
+        'name': 'Nome'
         'processo': 'Processo'
         'valor': 'Valor'
-        'forma_pagamento': 'Forma pagamento'
+        'forma_pagamento': 'Forma de pagamento'
         'saldo': 'Saldo'
-        'dt_fim': 'Término'
-        'dt_inicio': 'Início'
-        'dt_assinatura': 'Assinatura'
+        'dt_fim': 'Data de Término'
+        'dt_inicio': 'Data de Início'
+        'dt_assinatura': 'Data da Assinatura'
 

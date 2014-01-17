@@ -1,7 +1,7 @@
 'pt-BR':
   breadcrumbs:
     'tipo_pagamentos':
-      index: 'Tipo pagamentos'
+      index: 'Tipo de pagamentos'
   general:
     forms:
       'tipo_pagamento':

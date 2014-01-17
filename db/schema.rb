@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140116211707) do
+ActiveRecord::Schema.define(:version => 20140117173612) do
 
   create_table "acompanhamento_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -219,11 +219,18 @@ ActiveRecord::Schema.define(:version => 20140116211707) do
     t.datetime "date"
     t.integer  "contrato_id"
     t.float    "valor"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.boolean  "confirmado"
+    t.integer  "tipo_lancamento_id"
+    t.integer  "forma_pagamento_id"
+    t.integer  "tipo_pagamento_id"
   end
 
   add_index "conta_correntes", ["contrato_id"], :name => "index_conta_correntes_on_contrato_id"
+  add_index "conta_correntes", ["forma_pagamento_id"], :name => "index_conta_correntes_on_forma_pagamento_id"
+  add_index "conta_correntes", ["tipo_lancamento_id"], :name => "index_conta_correntes_on_tipo_lancamento_id"
+  add_index "conta_correntes", ["tipo_pagamento_id"], :name => "index_conta_correntes_on_tipo_pagamento_id"
 
   create_table "contrato_versions", :force => true do |t|
     t.string   "item_type",      :null => false
@@ -524,6 +531,15 @@ ActiveRecord::Schema.define(:version => 20140116211707) do
   end
 
   add_index "tipo_lancamento_versions", ["item_type", "item_id"], :name => "index_tipo_lancamento_versions_on_item_type_and_item_id"
+
+  create_table "tipo_lancamentos", :force => true do |t|
+    t.string   "name"
+    t.boolean  "is_credit"
+    t.boolean  "is_refund"
+    t.boolean  "is_invoice"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tipo_pagamento_versions", :force => true do |t|
     t.string   "item_type",      :null => false

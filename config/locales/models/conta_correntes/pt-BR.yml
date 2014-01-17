@@ -1,17 +1,21 @@
 'pt-BR':
   breadcrumbs:
     'conta_correntes':
-      index: 'Conta correntes'
+      index: 'Conta Corrente'
   general:
     forms:
       'conta_corrente':
-        'choose_contrato': 'Choose Contrato'
+        'choose_contrato': 'Escolha o Contrato'
 
   activerecord:
     models:
-      'conta_corrente': 'Conta correntes'
+      'conta_corrente': 'Conta Corrente'
     attributes:
       'conta_corrente':
-        'date': 'Date'
+        'date': 'Data'
         'contrato': 'Contrato'
+        'tipo_pagamento': 'Tipo de Pagamento'
+        'forma_pagamento': 'Forma de Pagamento'
+        'tipo_lancamento': 'Tipo de Lancamento'
         'valor': 'Valor'
+        'confirmado': 'Está compensado?'

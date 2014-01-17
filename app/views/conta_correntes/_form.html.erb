@@ -3,11 +3,16 @@
   <%= f.input :date, as: :datepicker %>
   
   <%= f.association :contrato, input_html: {class: 'span5 chosen-options'} %>
-    
+  <%= f.association :tipo_lancamento, input_html: {class: 'span5 chosen-options'} %>
+  <%= f.association :tipo_pagamento, input_html: {class: 'span5 chosen-options'} %>
+  <%= f.association :forma_pagamento, input_html: {class: 'span5 chosen-options'} %>
+   
   <%= f.input :valor, :wrapper => :prepend do %>
     <span class="add-on"><%= t('number.currency.format.unit')%></span><%= f.text_field :valor, class: :currency %>
   <% end %>
   
+    <%= f.input :confirmado %>
+    
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-primary' %>
     <%= f.button :submit, value: t('general.actions.save_and_go_to_new'), name: :submit_and_go_to_new, class: 'btn' %>

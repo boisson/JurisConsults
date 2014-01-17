@@ -12,6 +12,10 @@
       'conta_corrente': 'Conta correntes'
     attributes:
       'conta_corrente':
-        'date': 'Date'
+        'date': 'Data'
         'contrato': 'Contrato'
+        'tipo_pagamento': 'Tipo de Pagamento'
+        'forma_pagamento': 'Forma de Pagamento'
+        'tipo_lancamento': 'Tipo de Lancamento'
         'valor': 'Valor'
+        'confirmado': 'Está compensado?'

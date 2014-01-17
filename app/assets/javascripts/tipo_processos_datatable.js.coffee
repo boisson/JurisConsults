@@ -11,9 +11,7 @@ window.crud_datatable = $('#tipo_processos_datatable').dataTable
   aoColumns: [
     {sClass: "center"},
     {sClass: "center", sName: "tipo_processos.id"},
- 
     {sName: "tipo_processos.name"},
- 
     {sName: "tipo_processos.formato"},
     {sClass: "center"}
   ]

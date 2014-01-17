@@ -14,7 +14,9 @@ protected
         link_to(conta_corrente.id,conta_corrente_path(conta_corrente), remote: true),
         conta_corrente.date,
         ((conta_corrente.contrato.name rescue conta_corrente.contrato.id) if conta_corrente.contrato),
+        ((conta_corrente.tipo_lancamento.name rescue conta_corrente.tipo_lancamento.id) if conta_corrente.tipo_lancamento),
         input_text(conta_corrente,conta_corrente.valor, :valor),
+        input_boolean(conta_corrente,yes_or_no(conta_corrente.confirmado), :confirmado),
         crud_buttons(conta_corrente)
       ]
     end

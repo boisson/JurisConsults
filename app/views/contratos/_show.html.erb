@@ -4,18 +4,39 @@
 </p>
 
 <p>
+  <strong><%= Contrato.human_attribute_name :dt_inicio %>:</strong>
+  <%= l @contrato.dt_inicio%>
+
+<p>
+  <strong><%= Contrato.human_attribute_name :dt_assinatura %>:</strong>
+  <%= l @contrato.dt_assinatura %>
+</p>
+
+<p>
+  <strong><%= Contrato.human_attribute_name :dt_fim %>:</strong>
+  <%= l @contrato.dt_fim %>
+</p>
+
+
+<p>
   <strong><%= Contrato.human_attribute_name :valor %>:</strong>
-  <%= @contrato.valor %>
+  <%= number_to_currency @contrato.valor %>
 </p>
 
 <p>
   <strong><%= Contrato.human_attribute_name :forma_pagamento %>:</strong>
-  <%= @contrato.forma_pagamento %>
+  <%= @contrato.forma_pagamento.name %>
 </p>
 
 <p>
+  <strong><%= Contrato.human_attribute_name :tipo_processo %>:</strong>
+  <%= @contrato.tipo_processo.name %>
+</p>
+
+
+<p>
   <strong><%= Contrato.human_attribute_name :saldo %>:</strong>
-  <%= @contrato.saldo %>
+  <%= number_to_currency @contrato.saldo %>
 </p>
 
 

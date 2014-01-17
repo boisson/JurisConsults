@@ -1,0 +1,17 @@
+'pt-BR':
+  breadcrumbs:
+    'tipo_lancamentos':
+      index: 'Tipo de lançamentos'
+  general:
+    forms:
+      'tipo_lancamento':
+
+  activerecord:
+    models:
+      'tipo_lancamento': 'Tipo de lançamentos'
+    attributes:
+      'tipo_lancamento':
+        'name': 'Nome'
+        'is_invoice': 'É fatura?'
+        'is_credit': 'É crédito?'
+        'is_refund': 'Tem reembolso?'

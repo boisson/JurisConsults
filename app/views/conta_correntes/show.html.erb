@@ -15,6 +15,11 @@
   <%= @conta_corrente.valor %>
 </p>
 
+<p>
+  <b>Compensado:</b>
+  <%= @conta_corrente.confirmado %>
+</p>
+
 
 <%= link_to 'Edit', edit_conta_corrente_path(@conta_corrente) %> |
 <%= link_to 'Back', conta_correntes_path %>

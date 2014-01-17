@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tipo_lancamento.name %>
+</p>
+<p>
+  <b>É reembolsavel</b>
+  <%= @tipo_lancamento.is_refund %>
+</p>
+<p>
+  <b>É fatura</b>
+  <%= @tipo_lancamento.is_fatura %>
+</p>
+<p>
+  <b>É credito</b>
+  <%= @tipo_lancamento.is_credit %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_pagamento_path(@tipo_lancamento) %> |
+<%= link_to 'Back', tipo_pagamentos_path %>

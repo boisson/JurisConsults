@@ -1,0 +1,9 @@
+<%= datatable_build_table('tipo_lancamentos_datatable') do %>
+	<th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+	<th width="70"><%= TipoLancamento.human_attribute_name :id %></th>
+  <th><%= TipoLancamento.human_attribute_name :name %></th>
+  <th><%= TipoLancamento.human_attribute_name :is_refund %></th>
+  <th><%= TipoLancamento.human_attribute_name :is_invoice %></th>
+  <th><%= TipoLancamento.human_attribute_name :is_credit %></th>
+  <th width="226"></th>
+<% end -%>

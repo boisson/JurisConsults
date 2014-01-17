@@ -11,9 +11,7 @@ window.crud_datatable = $('#tipo_pagamentos_datatable').dataTable
   aoColumns: [
     {sClass: "center"},
     {sClass: "center", sName: "tipo_pagamentos.id"},
- 
     {sName: "tipo_pagamentos.name"},
- 
     {sName: "tipo_pagamentos.periodicidade"},
     {sClass: "center"}
   ]

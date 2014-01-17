@@ -1,0 +1,20 @@
+<p>
+  <strong><%= TipoLancamento.human_attribute_name :name %>:</strong>
+  <%= @tipo_lancamento.name %>
+</p>
+<p>
+  <strong><%= TipoLancamento.human_attribute_name :is_refund %>:</strong>
+  <%= @tipo_lancamento.is_refund %>
+</p>
+<p>
+  <strong><%= TipoLancamento.human_attribute_name :is_invoice %>:</strong>
+  <%= @tipo_lancamento.is_invoice %>
+</p>
+<p>
+  <strong><%= TipoLancamento.human_attribute_name :is_credit %>:</strong>
+  <%= @tipo_lancamento.is_credit %>
+</p>
+
+
+
+<%= go_back_to_list %>

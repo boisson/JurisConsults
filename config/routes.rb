@@ -27,22 +27,20 @@ JurisConsults::Application.routes.draw do
 	match 'forma_pagamentos/batch_destroy', :via => :delete
   resources :forma_pagamentos
 
-
 	match 'tipo_pagamentos/batch_destroy', :via => :delete
   resources :tipo_pagamentos
 
+	match 'tipo_lancamentos/batch_destroy', :via => :delete
+  resources :tipo_lancamentos
 
 	match 'advogados_escritorios/batch_destroy', :via => :delete
   resources :advogados_escritorios
 
-
 	match 'escritorios/batch_destroy', :via => :delete
   resources :escritorios
 
-
 	match 'assunto_processuals/batch_destroy', :via => :delete
   resources :assunto_processuals
-
 
 	match 'andamentos/batch_destroy', :via => :delete
   resources :andamentos
